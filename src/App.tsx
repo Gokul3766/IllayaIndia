@@ -3,11 +3,16 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
+import Vision from "./pages/Vision/Vision";
+import Principles from "./pages/Principles/Principles";
 import "./App.css";
 
 function AppContent() {
   const location = useLocation();
-  const hideFooter = location.pathname === "/about";
+  const hideFooter =
+    location.pathname === "/about" ||
+    location.pathname === "/vision" ||
+    location.pathname === "/principles";
 
   return (
     <>
@@ -15,6 +20,8 @@ function AppContent() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/vision" element={<Vision />} />
+        <Route path="/principles" element={<Principles />} />
       </Routes>
       {!hideFooter && <Footer />}
     </>

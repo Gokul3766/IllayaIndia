@@ -30,8 +30,8 @@ const Navbar = () => {
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about" },
-    { label: "Our Vision", href: "/#vision" },
-    { label: "Our Principles", href: "/#principles" },
+    { label: "Our Vision", href: "/vision" },
+    { label: "Our Principles", href: "/principles" },
     { label: "People's Parliament", href: "/#parliament" },
     { label: "Projects", href: "/#projects" },
     { label: "Media", href: "/#media" },

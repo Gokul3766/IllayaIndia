@@ -1,0 +1,908 @@
+.vision-page {
+  background-color: #00070f;
+  min-height: 100vh;
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.vision-hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 110px;
+  padding-bottom: 40px;
+  overflow: hidden;
+}
+
+.vision-hero-bg-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.vision-hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  filter: brightness(0.9);
+}
+
+.vision-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(90deg, #00070f 0%, rgba(0, 7, 15, 0.9) 30%, rgba(0, 7, 15, 0.4) 60%, rgba(0, 7, 15, 0.1) 100%),
+    linear-gradient(0deg, #00070f 0%, rgba(0, 7, 15, 0.8) 50%, rgba(0, 7, 15, 0) 100%);
+}
+
+.vision-hero-container {
+  position: relative;
+  z-index: 2;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-top: 20px;
+}
+
+/* Hero Content Column */
+.vision-hero-text-col {
+  padding-bottom: 30px;
+}
+
+.vision-tag-wrapper {
+  margin-bottom: 24px;
+}
+
+.vision-tag {
+  font-family: var(--font-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.vision-tag-underline {
+  height: 1.5px;
+  background: linear-gradient(90deg, var(--gold-primary) 0%, rgba(232, 168, 56, 0) 100%);
+  width: 160px;
+  margin-top: 8px;
+}
+
+.vision-hero-title {
+  font-family: var(--font-tamil);
+  font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+  font-weight: 900;
+  line-height: 1.25;
+  color: var(--white);
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.highlight-gold {
+  color: var(--gold-primary);
+}
+
+.vision-hero-subtitle {
+  font-family: var(--font-tamil);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 720px;
+}
+
+/* ============================================
+   BOTTOM VALUES CONTAINER
+   ============================================ */
+.vision-values-container {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.vision-values-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border: 1.5px solid rgba(232, 168, 56, 0.45);
+  border-radius: 12px;
+  background-color: rgba(0, 7, 15, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 30px 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+}
+
+.vision-value-card-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.vision-value-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.vision-value-card:hover {
+  transform: translateY(-4px);
+}
+
+.vision-value-icon-wrapper {
+  color: var(--gold-primary);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 4px 6px rgba(232, 168, 56, 0.15));
+}
+
+.vision-value-card:hover .vision-value-icon-wrapper {
+  transform: scale(1.1);
+  filter: drop-shadow(0 6px 12px rgba(232, 168, 56, 0.35));
+}
+
+.vision-value-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.vision-value-tamil {
+  font-family: var(--font-tamil);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white);
+  transition: color 0.3s ease;
+  line-height: 1.3;
+}
+
+.vision-value-tamil-sub {
+  font-family: var(--font-tamil);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--white-muted);
+  transition: color 0.3s ease;
+  line-height: 1.3;
+}
+
+.vision-value-card:hover .vision-value-tamil {
+  color: var(--gold-primary);
+}
+
+.vision-value-card:hover .vision-value-tamil-sub {
+  color: var(--white);
+}
+
+/* Vertical dividers on desktop */
+.vision-value-card-wrapper:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    rgba(232, 168, 56, 0.05) 0%,
+    rgba(232, 168, 56, 0.25) 50%,
+    rgba(232, 168, 56, 0.05) 100%
+  );
+}
+
+/* ============================================
+   SECOND SECTION: DETAILED VISION INFOGRAPHIC
+   ============================================ */
+.vision-details-section {
+  position: relative;
+  background-color: #00070f;
+  padding: 100px 0 120px;
+}
+
+/* Left Column */
+.vision-left-title {
+  font-family: var(--font-tamil);
+  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 2px;
+}
+
+.vision-left-subtitle {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  letter-spacing: 2.5px;
+  display: block;
+}
+
+.vision-left-quote-wrapper {
+  margin-top: 30px;
+}
+
+.vision-left-quote-svg {
+  color: var(--gold-primary);
+  opacity: 0.3;
+  margin-bottom: 16px;
+}
+
+.vision-left-desc {
+  font-family: var(--font-tamil);
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 24px;
+}
+
+.vision-left-desc-gold {
+  font-family: var(--font-tamil);
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.8;
+  color: var(--gold-primary);
+}
+
+/* Center Column (Wheel Wrapper) */
+.vision-wheel-wrapper {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 0 50px rgba(232, 168, 56, 0.15);
+  background: radial-gradient(circle, rgba(232, 168, 56, 0.12) 0%, rgba(0, 7, 15, 0) 70%);
+}
+
+.vision-wheel-img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 50%;
+  border: 1.5px solid rgba(232, 168, 56, 0.35);
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.4s ease;
+}
+
+.vision-wheel-wrapper:hover .vision-wheel-img {
+  transform: scale(1.02) rotate(1deg);
+  border-color: rgba(232, 168, 56, 0.6);
+}
+
+/* Right Column */
+.vision-right-title-wrapper {
+  margin-bottom: 35px;
+}
+
+.vision-right-title-top {
+  font-family: var(--font-tamil);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.vision-right-title-bottom {
+  font-family: var(--font-tamil);
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: var(--gold-primary);
+}
+
+.vision-right-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.vision-right-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: transform 0.2s ease;
+}
+
+.vision-right-item:hover {
+  transform: translateX(4px);
+}
+
+.vision-right-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-primary);
+  background-color: rgba(232, 168, 56, 0.05);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(232, 168, 56, 0.1);
+}
+
+.vision-right-item:hover .vision-right-icon-wrapper {
+  background-color: var(--gold-primary);
+  color: #00070f;
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(232, 168, 56, 0.3);
+}
+
+.vision-right-text {
+  font-family: var(--font-tamil);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+/* ============================================
+   THIRD SECTION: OUR PROMISE
+   ============================================ */
+.vision-promise-section {
+  position: relative;
+  background-color: #00070f;
+  padding: 40px 0 100px;
+}
+
+.vision-promise-header {
+  margin-bottom: -1px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.vision-promise-title {
+  font-family: var(--font-tamil);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 900;
+  margin: 0;
+  background-color: #00070f;
+  padding: 0 24px;
+  position: relative;
+  top: 20px;
+}
+
+.vision-promise-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px 20px 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(232, 168, 56, 0.3);
+  /* background: rgba(255, 255, 255, 0.02); */
+}
+
+.vision-promise-card {
+  flex: 1;
+  min-width: 200px;
+  max-width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+
+.vision-promise-img-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  padding-bottom: 65%;
+}
+
+.vision-promise-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  filter: brightness(0.85);
+  transition: filter 0.3s ease;
+}
+
+.vision-promise-card:hover .vision-promise-img {
+  filter: brightness(1.1);
+}
+
+.vision-promise-icon {
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #00070f;
+  border: 1.5px solid var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-primary);
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.vision-promise-content {
+  padding-top: 5px;
+}
+
+.vision-promise-card-title {
+  font-family: var(--font-tamil);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.vision-promise-card-desc {
+  font-family: var(--font-tamil);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ============================================
+   FOURTH SECTION: CALL TO ACTION BANNER
+   ============================================ */
+.vision-cta-section {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #00070f;
+}
+
+.vision-cta-bg-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  max-width: 900px;
+  z-index: 0;
+}
+
+.vision-cta-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.vision-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #00070f 0%, rgba(0, 7, 15, 0.3) 30%, rgba(0, 7, 15, 0.1) 50%, rgba(0, 7, 15, 0.3) 70%, #00070f 100%);
+}
+
+/* Left green fade */
+.vision-cta-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100%;
+  background: #00070f;
+  z-index: 1;
+}
+
+/* Right green fade */
+.vision-cta-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 100%;
+  background: #00070f;
+  z-index: 1;
+}
+
+.vision-cta-container {
+  position: relative;
+  z-index: 2;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.vision-cta-title {
+  font-family: var(--font-tamil);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.vision-cta-subtitle {
+  font-family: var(--font-tamil);
+  font-size: 1.15rem;
+  color: var(--white);
+  line-height: 1.6;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  margin: 0;
+}
+
+.vision-cta-right-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.vision-cta-right-text {
+  font-family: var(--font-tamil);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 24px;
+  line-height: 1.4;
+  text-align: left;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.vision-cta-btn {
+  background-color: var(--gold-primary);
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 28px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 40px;
+}
+
+.vision-cta-btn:hover {
+  background-color: #f7b733;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(232, 168, 56, 0.4);
+}
+
+.vision-cta-social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.vision-cta-social-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.vision-cta-social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  text-decoration: none;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.social-icon.fb { background-color: #3b5998; }
+.social-icon.tw { background-color: #1da1f2; }
+.social-icon.ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+.social-icon.yt { background-color: #ff0000; }
+.social-icon.wa { background-color: #25d366; }
+.social-icon.tg { background-color: #0088cc; }
+
+/* ============================================
+   RESPONSIVENESS / MEDIA QUERIES
+   ============================================ */
+
+/* LAPTOP / LARGE TABLET BREAKPOINTS */
+@media (max-width: 1199.98px) {
+  .vision-hero-title {
+    font-size: 2.8rem;
+  }
+  .vision-hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .vision-details-section {
+    padding: 80px 0 100px;
+  }
+
+  .vision-wheel-img {
+    max-width: 380px;
+  }
+}
+
+/* TABLET LAYOUT */
+@media (max-width: 1024px) {
+  .vision-hero-section {
+    padding-top: 105px;
+    min-height: auto;
+  }
+
+  .vision-values-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px 0;
+    padding: 24px 15px;
+  }
+
+  /* Clear desktop dividers on tablet */
+  .vision-value-card-wrapper::after {
+    display: none !important;
+  }
+
+  /* Add right border to columns 1 and 2 of each row on tablet */
+  .vision-value-card-wrapper:nth-child(3n-2)::after,
+  .vision-value-card-wrapper:nth-child(3n-1)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 10%;
+    height: 80%;
+    width: 1px;
+    background: rgba(232, 168, 56, 0.2);
+    display: block !important;
+  }
+
+  .vision-value-tamil {
+    font-size: 0.95rem;
+  }
+  .vision-value-tamil-sub {
+    font-size: 0.85rem;
+  }
+
+  /* Second section tablet tweaks */
+  .vision-details-section {
+    padding: 60px 0 80px;
+  }
+  
+  .vision-left-title {
+    font-size: 2rem;
+  }
+  
+  .vision-wheel-img {
+    max-width: 340px;
+  }
+
+  .vision-right-title-bottom {
+    font-size: 1.5rem;
+  }
+
+  /* Promise & CTA tablet tweaks */
+  .vision-promise-section {
+    padding: 30px 0 80px;
+  }
+  
+  .vision-promise-title {
+    font-size: 2.2rem;
+  }
+
+  .vision-cta-title {
+    font-size: 3rem;
+  }
+
+  .vision-cta-right-text {
+    font-size: 1.1rem;
+  }
+}
+
+/* MOBILE LAYOUT */
+@media (max-width: 768px) {
+  .vision-hero-section {
+    padding-top: 90px;
+  }
+
+  .vision-tag-underline {
+    width: 120px;
+  }
+
+  .vision-hero-title {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+  }
+
+  .vision-hero-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+
+  .vision-values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 0;
+    padding: 20px 10px;
+  }
+
+  /* Reset tablet dividers */
+  .vision-value-card-wrapper::after {
+    display: none !important;
+  }
+
+  /* Left columns in 2-column layout get right borders */
+  .vision-value-card-wrapper:nth-child(odd)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 10%;
+    height: 80%;
+    width: 1px;
+    background: rgba(232, 168, 56, 0.2);
+    display: block !important;
+  }
+
+  .vision-value-tamil {
+    font-size: 0.9rem;
+  }
+  .vision-value-tamil-sub {
+    font-size: 0.8rem;
+  }
+
+  /* Mobile: stack infographic columns vertically */
+  .vision-details-section {
+    padding: 50px 0 60px;
+  }
+  
+  .vision-left-quote-wrapper {
+    margin-top: 20px;
+  }
+
+  .vision-wheel-img {
+    max-width: 320px;
+  }
+
+  /* Promise & CTA mobile tweaks */
+  .vision-promise-grid {
+    padding: 20px 10px;
+  }
+  
+  .vision-promise-card {
+    min-width: 45%;
+  }
+
+  .vision-cta-section {
+    min-height: auto;
+    padding-bottom: 20px;
+  }
+
+  .vision-cta-section::before,
+  .vision-cta-section::after {
+    width: 10%;
+  }
+
+  .vision-cta-bg-wrapper {
+    width: 80%;
+  }
+
+  /* Promise grid mobile fix */
+  .vision-promise-grid {
+    padding: 30px 10px 20px;
+  }
+
+  .vision-cta-title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .vision-cta-subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .vision-cta-right-col {
+    align-items: center;
+  }
+
+  .vision-cta-right-text {
+    text-align: center;
+  }
+  
+  .vision-cta-social {
+    align-items: center;
+  }
+}
+
+/* SMALL MOBILE SCREEN */
+@media (max-width: 480px) {
+  .vision-hero-title {
+    font-size: 1.85rem;
+  }
+
+  .vision-hero-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .vision-values-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 20px;
+  }
+
+  .vision-value-card-wrapper::after {
+    display: none !important;
+  }
+
+  /* Add horizontal divider between rows on small mobile */
+  .vision-value-card-wrapper:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      rgba(232, 168, 56, 0.05) 0%,
+      rgba(232, 168, 56, 0.2) 50%,
+      rgba(232, 168, 56, 0.05) 100%
+    );
+    display: block !important;
+    top: auto;
+    right: auto;
+  }
+
+  .vision-value-card {
+    padding: 6px 0;
+  }
+
+  .vision-wheel-img {
+    max-width: 280px;
+  }
+
+  .vision-promise-card {
+    min-width: 100%;
+  }
+
+  .vision-cta-title {
+    font-size: 2.2rem;
+  }
+
+  .vision-cta-section::before,
+  .vision-cta-section::after {
+    width: 5%;
+  }
+
+  .vision-cta-bg-wrapper {
+    width: 90%;
+  }
+}
