@@ -79,7 +79,7 @@
 
 .vision-hero-title {
   font-family: var(--font-tamil);
-  font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+  font-size: 4.2rem;
   font-weight: 900;
   line-height: 1.25;
   color: var(--white);
@@ -93,7 +93,7 @@
 
 .vision-hero-subtitle {
   font-family: var(--font-tamil);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 400;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.85);
@@ -214,13 +214,13 @@
 .vision-details-section {
   position: relative;
   background-color: #00070f;
-  padding: 100px 0 120px;
+  padding: 60px 0 80px;
 }
 
 /* Left Column */
 .vision-left-title {
   font-family: var(--font-tamil);
-  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  font-size: 1.8rem;
   font-weight: 900;
   color: var(--white);
   margin-bottom: 2px;
@@ -247,7 +247,7 @@
 
 .vision-left-desc {
   font-family: var(--font-tamil);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   line-height: 1.9;
   color: rgba(255, 255, 255, 0.85);
   margin-bottom: 24px;
@@ -300,7 +300,7 @@
 
 .vision-right-title-bottom {
   font-family: var(--font-tamil);
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: 900;
   color: var(--gold-primary);
 }
@@ -358,7 +358,7 @@
 .vision-promise-section {
   position: relative;
   background-color: #00070f;
-  padding: 40px 0 100px;
+  padding: 40px 0 60px;
 }
 
 .vision-promise-header {
@@ -371,7 +371,7 @@
 
 .vision-promise-title {
   font-family: var(--font-tamil);
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-size: 1.8rem;
   font-weight: 900;
   margin: 0;
   background-color: #00070f;
@@ -534,7 +534,7 @@
 
 .vision-cta-title {
   font-family: var(--font-tamil);
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-size: 1.8rem;
   font-weight: 900;
   line-height: 1.2;
   margin-bottom: 16px;
@@ -543,7 +543,7 @@
 
 .vision-cta-subtitle {
   font-family: var(--font-tamil);
-  font-size: 1.15rem;
+  font-size: 0.95rem;
   color: var(--white);
   line-height: 1.6;
   text-shadow: 0 2px 4px rgba(0,0,0,0.5);
@@ -559,7 +559,7 @@
 
 .vision-cta-right-text {
   font-family: var(--font-tamil);
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--white);
   margin-bottom: 24px;
@@ -575,7 +575,7 @@
   border-radius: 4px;
   padding: 12px 28px;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   letter-spacing: 1px;
   display: flex;
   align-items: center;
@@ -638,16 +638,16 @@
    ============================================ */
 
 /* LAPTOP / LARGE TABLET BREAKPOINTS */
-@media (max-width: 1199.98px) {
+@media (max-width: 1200px) {
   .vision-hero-title {
-    font-size: 2.8rem;
+    font-size: 3rem;
   }
   .vision-hero-subtitle {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .vision-details-section {
-    padding: 80px 0 100px;
+    padding: 50px 0 60px;
   }
 
   .vision-wheel-img {
@@ -656,7 +656,7 @@
 }
 
 /* TABLET LAYOUT */
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
   .vision-hero-section {
     padding-top: 105px;
     min-height: auto;
@@ -695,11 +695,11 @@
 
   /* Second section tablet tweaks */
   .vision-details-section {
-    padding: 60px 0 80px;
+    padding: 40px 0 50px;
   }
   
   .vision-left-title {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   
   .vision-wheel-img {
@@ -707,24 +707,24 @@
   }
 
   .vision-right-title-bottom {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   /* Promise & CTA tablet tweaks */
   .vision-promise-section {
-    padding: 30px 0 80px;
+    padding: 30px 0 50px;
   }
   
   .vision-promise-title {
-    font-size: 2.2rem;
+    font-size: 1.6rem;
   }
 
   .vision-cta-title {
-    font-size: 3rem;
+    font-size: 1.6rem;
   }
 
   .vision-cta-right-text {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
   }
 }
 
@@ -739,12 +739,12 @@
   }
 
   .vision-hero-title {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
     margin-bottom: 16px;
   }
 
   .vision-hero-subtitle {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     margin-bottom: 30px;
   }
 
@@ -780,7 +780,7 @@
 
   /* Mobile: stack infographic columns vertically */
   .vision-details-section {
-    padding: 50px 0 60px;
+    padding: 30px 0 40px;
   }
   
   .vision-left-quote-wrapper {
@@ -820,7 +820,7 @@
   }
 
   .vision-cta-title {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     text-align: center;
   }
 
@@ -842,6 +842,36 @@
   }
 }
 
+/* MOBILE */
+@media (max-width: 576px) {
+  .vision-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .vision-hero-subtitle {
+    font-size: 0.82rem;
+  }
+
+  .vision-value-tamil {
+    font-size: 0.85rem;
+  }
+  .vision-value-tamil-sub {
+    font-size: 0.75rem;
+  }
+
+  .vision-left-title {
+    font-size: 1.5rem;
+  }
+
+  .vision-promise-title {
+    font-size: 1.5rem;
+  }
+
+  .vision-cta-title {
+    font-size: 1.3rem;
+  }
+}
+
 /* SMALL MOBILE SCREEN */
 @media (max-width: 480px) {
   .vision-hero-title {
@@ -849,7 +879,7 @@
   }
 
   .vision-hero-subtitle {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 
   .vision-values-grid {
@@ -894,7 +924,7 @@
   }
 
   .vision-cta-title {
-    font-size: 2.2rem;
+    font-size: 1.2rem;
   }
 
   .vision-cta-section::before,

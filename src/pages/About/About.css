@@ -51,7 +51,7 @@
 }
 
 .about-hero-title {
-  font-size: clamp(2rem, 3.8vw, 3.5rem);
+  font-size: 3.5rem;
   font-weight: 900;
   line-height: 1.1;
   letter-spacing: 1px;
@@ -65,7 +65,7 @@
 
 .about-hero-subtitle {
   font-family: var(--font-tamil);
-  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+  font-size: 1.8rem;
   font-weight: 700;
   color: var(--white);
   margin-bottom: 25px;
@@ -74,7 +74,7 @@
 
 .about-hero-description {
   font-family: var(--font-tamil);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   line-height: 1.8;
   color: var(--white-muted);
   margin-bottom: 35px;
@@ -197,7 +197,7 @@
   z-index: 6;
 }
 
-@media (max-width: 1399px) {
+@media (max-width: 1200px) {
   .about-hero-left-content {
     max-width: 650px;
     padding: 40px 50px 40px 24px;
@@ -210,7 +210,7 @@
   }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 992px) {
   .about-hero-left-content {
     max-width: 550px;
     padding: 30px 40px 30px 20px;
@@ -222,7 +222,7 @@
     font-size: 1.45rem;
   }
   .about-hero-description {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     margin-bottom: 25px;
   }
   .about-hero-divider {
@@ -233,7 +233,7 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .about-hero-section {
     flex-direction: column;
     padding-top: 70px;
@@ -309,7 +309,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .about-hero-left {
     padding: 40px 20px 60px;
   }
@@ -342,7 +342,7 @@
 .about-story-section {
   position: relative;
   background-color: #F5F0E8;
-  padding: 80px 0;
+  padding: 60px 0;
   overflow: hidden;
 }
 
@@ -377,7 +377,7 @@
 
 .about-story-title {
   font-family: var(--font-tamil);
-  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-size: 1.8rem;
   font-weight: 800;
   color: #1A1A1A;
   line-height: 1.35;
@@ -547,21 +547,21 @@
   margin: 0;
 }
 
-@media (max-width: 1399px) {
+@media (max-width: 1200px) {
   .about-story-section {
-    padding: 70px 0;
+    padding: 50px 0;
   }
   .about-story-title {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 992px) {
   .about-story-section {
-    padding: 60px 0;
+    padding: 40px 0;
   }
   .about-story-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 24px;
   }
   .about-journey-icon-wrapper {
@@ -577,10 +577,7 @@
   }
 }
 
-@media (max-width: 991px) {
-  .about-story-section {
-    padding: 50px 0;
-  }
+@media (max-width: 992px) {
   .about-story-card {
     padding: 10px 0;
     margin-bottom: 30px;
@@ -591,17 +588,14 @@
     border-top: 1px solid rgba(0, 0, 0, 0.08);
     padding-top: 30px;
   }
-  .about-story-title {
-    font-size: 2rem;
-  }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .about-story-section {
-    padding: 40px 0;
+    padding: 30px 0;
   }
   .about-story-title {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
   }
   .about-story-question-item {
@@ -640,7 +634,7 @@
 .about-identity-section {
   position: relative;
   background-color: #0D0D0D;
-  padding: 80px 0;
+  padding: 60px 0;
   overflow: hidden;
 }
 
@@ -767,9 +761,9 @@
   flex: 1;
 }
 
-@media (max-width: 1399px) {
+@media (max-width: 1200px) {
   .about-identity-section {
-    padding: 70px 0;
+    padding: 50px 0;
   }
   .about-identity-grid {
     gap: 16px;
@@ -785,9 +779,9 @@
   }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 992px) {
   .about-identity-section {
-    padding: 60px 0;
+    padding: 40px 0;
   }
   .about-identity-grid {
     gap: 14px;
@@ -803,10 +797,7 @@
   }
 }
 
-@media (max-width: 991px) {
-  .about-identity-section {
-    padding: 50px 0;
-  }
+@media (max-width: 992px) {
   .about-identity-header {
     margin-bottom: 36px;
   }
@@ -825,9 +816,9 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .about-identity-section {
-    padding: 40px 0;
+    padding: 30px 0;
   }
   .about-identity-header {
     margin-bottom: 28px;
@@ -872,7 +863,7 @@
 .about-believe-section {
   position: relative;
   background-color: #F5F0E8;
-  padding: 80px 0;
+  padding: 60px 0;
   overflow: hidden;
 }
 
@@ -889,7 +880,7 @@
 
 .about-believe-title {
   font-family: var(--font-tamil);
-  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-size: 1.8rem;
   font-weight: 800;
   color: #1A1A1A;
   line-height: 1.35;
@@ -938,7 +929,7 @@
   align-items: flex-start;
   gap: 12px;
   font-family: var(--font-tamil);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   line-height: 1.65;
   color: #444;
   transition: all 0.3s ease;
@@ -971,7 +962,7 @@
 
 .about-different-title {
   font-family: var(--font-tamil);
-  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-size: 1.6rem;
   font-weight: 800;
   color: #1A1A1A;
   line-height: 1.35;
@@ -1089,15 +1080,15 @@
   box-shadow: 0 2px 10px rgba(232, 168, 56, 0.3);
 }
 
-@media (max-width: 1399px) {
+@media (max-width: 1200px) {
   .about-believe-section {
-    padding: 70px 0;
+    padding: 50px 0;
   }
   .about-believe-title {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
   .about-different-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
   .about-believe-logo-card {
     width: 110px;
@@ -1105,16 +1096,16 @@
   }
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 992px) {
   .about-believe-section {
-    padding: 60px 0;
+    padding: 40px 0;
   }
   .about-believe-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 24px;
   }
   .about-different-title {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin-bottom: 20px;
   }
   .about-believe-logo-card {
@@ -1139,10 +1130,7 @@
   }
 }
 
-@media (max-width: 991px) {
-  .about-believe-section {
-    padding: 50px 0;
-  }
+@media (max-width: 992px) {
   .about-believe-card {
     padding: 10px 0;
     margin-bottom: 30px;
@@ -1153,28 +1141,22 @@
     border-top: 1px solid rgba(0, 0, 0, 0.08);
     padding-top: 30px;
   }
-  .about-believe-title {
-    font-size: 2rem;
-  }
-  .about-different-title {
-    font-size: 1.8rem;
-  }
   .about-believe-logo-card {
     width: 120px;
     height: 150px;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .about-believe-section {
-    padding: 40px 0;
+    padding: 30px 0;
   }
   .about-believe-title {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
   }
   .about-different-title {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-bottom: 16px;
   }
   .about-believe-body {
@@ -1320,7 +1302,7 @@
 }
 
 .quote-line-2 {
-  font-size: 1.65rem;
+  font-size: 1.25rem;
   color: var(--gold-primary);
   font-weight: 800;
 }
@@ -1447,13 +1429,13 @@
   letter-spacing: 2px;
 }
 
-@media (max-width: 1399px) {
-  .quote-line-2 { font-size: 1.4rem; }
+@media (max-width: 1200px) {
+  .quote-line-2 { font-size: 1.15rem; }
   .quote-line-1 { font-size: 1rem; }
 }
 
-@media (max-width: 1199px) {
-  .quote-line-2 { font-size: 1.25rem; }
+@media (max-width: 992px) {
+  .quote-line-2 { font-size: 1.1rem; }
   .btn-english { font-size: 0.65rem; }
   .btn-tamil { font-size: 0.6rem; }
   .about-action-btn { min-width: 120px; padding: 8px 10px; }
@@ -1461,7 +1443,7 @@
   .about-footer-logo-text h3 { font-size: 1.1rem; }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .about-footer-bg-layer { width: 100%; opacity: 0.15; }
   .about-footer-bg-brush { display: none; }
   
@@ -1477,7 +1459,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .about-footer-right-content {
     flex-direction: column;
     gap: 20px;
@@ -1485,6 +1467,6 @@
   .about-footer-actions {
     flex-direction: column;
   }
-  .quote-line-2 { font-size: 1.1rem; }
+  .quote-line-2 { font-size: 1rem; }
 }
 

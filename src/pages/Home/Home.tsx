@@ -29,7 +29,24 @@ const AUTOPLAY_INTERVAL = 5000;
 const Home = () => {
   const [selectedPoll, setSelectedPoll] = useState(1);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [showLoader, setShowLoader] = useState(true);
+  const [isFadingOut, setIsFadingOut] = useState(false);
   const autoplayRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  useEffect(() => {
+    const fadeTimer = setTimeout(() => {
+      setIsFadingOut(true);
+    }, 1700);
+
+    const removeTimer = setTimeout(() => {
+      setShowLoader(false);
+    }, 2000);
+
+    return () => {
+      clearTimeout(fadeTimer);
+      clearTimeout(removeTimer);
+    };
+  }, []);
 
   const startAutoplay = useCallback(() => {
     stopAutoplay();
@@ -85,6 +102,19 @@ const Home = () => {
 
   return (
     <>
+      {showLoader && (
+        <div className={`fullscreen-loader ${isFadingOut ? "fade-out" : ""}`}>
+          <div className="loader-backdrop-glow"></div>
+          <div className="loader-content">
+            <div className="loader-logo-wrapper">
+              <div className="loader-logo-ring"></div>
+              <img src={illayaLogo} alt="ILLAYA INDIA Logo" className="loader-logo" />
+            </div>
+            <h1 className="loader-title">ILLAYA INDIA</h1>
+            <p className="loader-tagline">மனிதம் ஒன்றே போதும்</p>
+          </div>
+        </div>
+      )}
       <section className="hero-section" id="hero-section">
         <div className="hero-bg-wrapper">
           {HERO_SLIDES.map((slide, index) => (

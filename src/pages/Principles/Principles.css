@@ -79,7 +79,7 @@
 
 .principles-hero-title {
   font-family: var(--font-tamil);
-  font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+  font-size: 4.2rem;
   font-weight: 900;
   line-height: 1.25;
   color: var(--white);
@@ -93,7 +93,7 @@
 
 .principles-hero-subtitle {
   font-family: var(--font-tamil);
-  font-size: 1.15rem;
+  font-size: 0.95rem;
   font-weight: 400;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.85);
@@ -234,7 +234,7 @@
 /* ============================================
    RESPONSIVENESS / MEDIA QUERIES
    ============================================ */
-@media (max-width: 991.98px) {
+@media (max-width: 992px) {
   .principles-hero-section {
     padding-top: 100px;
     padding-bottom: 30px;
@@ -261,7 +261,7 @@
   }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 576px) {
   .principles-card-col {
     width: 100%;
   }
@@ -293,7 +293,7 @@
    ============================================ */
 .principles-core-section {
   background-color: #00070f;
-  padding: 100px 0;
+  padding: 60px 0;
   position: relative;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -304,7 +304,7 @@
 
 .principles-core-section-title {
   font-family: var(--font-tamil);
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-size: 1.8rem;
   font-weight: 800;
   color: var(--gold-primary);
   letter-spacing: 0.5px;
@@ -461,14 +461,14 @@
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 992px) {
   .principles-core-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 576px) {
   .principles-core-grid {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -479,5 +479,696 @@
     aspect-ratio: 3 / 3.8;
   }
 }
+
+/* ============================================
+   PROCESS SECTION (எங்கள் செயல்முறை)
+   ============================================ */
+.principles-process-section {
+  background-color: #00070f;
+  padding: 50px 0 40px;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.principles-process-header {
+  margin-bottom: 55px;
+}
+
+.principles-process-title {
+  font-family: var(--font-tamil);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--gold-primary);
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.process-dot {
+  color: var(--gold-primary);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.principles-process-grid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.principles-process-step-wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.principles-process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  padding: 0 8px;
+}
+
+.principles-process-icon-circle {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  border: 2px solid var(--gold-primary);
+  background-color: rgba(0, 7, 15, 0.85);
+  color: var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  box-shadow: 0 0 15px rgba(232, 168, 56, 0.12);
+  transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  cursor: pointer;
+}
+
+.principles-process-step:hover .principles-process-icon-circle {
+  transform: translateY(-5px) scale(1.06);
+  border-color: #ffffff;
+  color: #ffffff;
+  box-shadow: 0 0 25px rgba(232, 168, 56, 0.4);
+  background-color: rgba(232, 168, 56, 0.15);
+}
+
+.principles-process-arrow-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  min-width: 40px;
+  flex-shrink: 0;
+  margin-top: 0;
+  padding-top: 29px; /* (76px icon height / 2) - (arrow height / 2) ≈ 29px to vertically center with icon */
+  position: relative;
+  color: var(--gold-primary);
+  opacity: 0.85;
+  align-self: flex-start;
+}
+
+.principles-process-arrow-line {
+  height: 1.5px;
+  flex: 1;
+  background: linear-gradient(90deg, rgba(232, 168, 56, 0.2), var(--gold-primary));
+}
+
+.principles-process-arrow-icon {
+  margin-left: -3px;
+  flex-shrink: 0;
+}
+
+.principles-process-step-title {
+  font-family: var(--font-tamil);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  margin-bottom: 10px;
+  line-height: 1.35;
+  min-height: 2.7em;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.principles-process-step:hover .principles-process-step-title {
+  color: #ffffff;
+}
+
+.principles-process-step-desc {
+  font-family: var(--font-tamil);
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 210px;
+}
+
+/* Responsive adjustments for Process Section */
+@media (max-width: 992px) {
+  .principles-process-grid {
+    flex-wrap: wrap;
+    gap: 35px 0;
+    justify-content: center;
+  }
+
+  .principles-process-step-wrapper {
+    flex: 0 0 33.333%;
+  }
+
+  .principles-process-arrow-container {
+    display: none;
+  }
+
+  .principles-process-step-title {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .principles-process-step-wrapper {
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .principles-process-step-wrapper {
+    flex: 0 0 100%;
+  }
+
+  .principles-process-step-desc {
+    max-width: 280px;
+  }
+}
+
+/* ============================================
+   PLEDGES & GOALS BANNER SECTION (எங்கள் 5 உறுதிமொழிகள் & எங்கள் இலக்கு)
+   ============================================ */
+.principles-pledges-section {
+  background-color: #00070f;
+  padding: 40px 0;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pledges-banner-card {
+  position: relative;
+  border-radius: 12px;
+  border: 1px solid rgba(232, 168, 56, 0.4);
+  background-color: rgba(2, 13, 26, 0.95);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), inset 0 1px 2px rgba(232, 168, 56, 0.15);
+  overflow: hidden;
+}
+
+.pledges-banner-bg-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.pledges-banner-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.18;
+  filter: contrast(1.2) brightness(0.8);
+}
+
+.pledges-banner-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at center, rgba(0, 7, 15, 0.4) 0%, rgba(0, 7, 15, 0.95) 90%),
+    linear-gradient(180deg, rgba(0, 7, 15, 0.7) 0%, rgba(0, 7, 15, 0.3) 50%, rgba(0, 7, 15, 0.8) 100%);
+}
+
+.pledges-banner-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 35px 30px;
+  gap: 20px;
+}
+
+/* Columns */
+.pledges-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.pledges-left-col,
+.pledges-right-col {
+  flex: 1.1;
+}
+
+.pledges-center-col {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 15px;
+}
+
+/* Titles */
+.pledges-col-title {
+  font-family: var(--font-tamil);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 20px;
+  letter-spacing: 0.3px;
+  position: relative;
+}
+
+/* Lists */
+.pledges-list,
+.goals-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.pledges-list-item,
+.goals-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: var(--font-tamil);
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.45;
+}
+
+/* Check Icons */
+.pledges-check-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--gold-primary);
+  color: #00070f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+  box-shadow: 0 2px 6px rgba(232, 168, 56, 0.3);
+}
+
+/* Goal Badge Icons */
+.goals-badge-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold-primary);
+  background-color: rgba(232, 168, 56, 0.1);
+  color: var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Center Slogan Quote */
+.slogan-quote-mark {
+  font-family: Georgia, serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: var(--gold-primary);
+  line-height: 0.6;
+  margin-bottom: 8px;
+  opacity: 0.9;
+  user-select: none;
+}
+
+.slogan-text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slogan-line {
+  font-family: var(--font-tamil);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.35;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.slogan-highlight {
+  font-family: var(--font-tamil);
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--gold-primary);
+  line-height: 1.15;
+  margin-top: 6px;
+  margin-bottom: 0;
+  letter-spacing: 0.5px;
+  text-shadow: 0 4px 15px rgba(232, 168, 56, 0.35);
+}
+
+/* Dividers */
+.pledges-col-divider {
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  align-self: stretch;
+  margin: 0 10px;
+  flex-shrink: 0;
+}
+
+/* Bottom Edge Glow */
+.pledges-bottom-glow {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  right: 5%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(232, 168, 56, 0) 0%,
+    rgba(232, 168, 56, 0.75) 50%,
+    rgba(232, 168, 56, 0) 100%
+  );
+  box-shadow: 0 0 10px rgba(232, 168, 56, 0.5);
+  pointer-events: none;
+}
+
+/* Responsive Styles for Banner */
+@media (max-width: 992px) {
+  .pledges-banner-content {
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 30px;
+  }
+
+  .pledges-col-divider {
+    width: 100%;
+    height: 1px;
+    margin: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.25) 50%,
+      rgba(255, 255, 255, 0.05) 100%
+    );
+  }
+
+  .pledges-center-col {
+    order: -1;
+    padding: 10px 0;
+  }
+
+  .slogan-highlight {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .pledges-col-title {
+    font-size: 1.2rem;
+  }
+
+  .pledges-list-item,
+  .goals-list-item {
+    font-size: 0.88rem;
+  }
+
+  .slogan-line {
+    font-size: 1.1rem;
+  }
+
+  .slogan-highlight {
+    font-size: 1.9rem;
+  }
+}
+
+/* ============================================
+   BOTTOM CTA BANNER SECTION (நாங்கள் தனியாக இல்லை...)
+   ============================================ */
+.principles-bottom-cta-section {
+  position: relative;
+  background-color: #00070f;
+  padding: 45px 0;
+  border-top: 1px solid rgba(232, 168, 56, 0.35);
+  border-bottom: 1px solid rgba(232, 168, 56, 0.2);
+  overflow: hidden;
+}
+
+.principles-bottom-cta-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.principles-bottom-cta-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  opacity: 0.85;
+  filter: contrast(1.15) brightness(0.95);
+}
+
+.principles-bottom-cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #00070f 0%,
+    rgba(0, 7, 15, 0.82) 20%,
+    rgba(0, 7, 15, 0.35) 45%,
+    rgba(0, 7, 15, 0.45) 60%,
+    rgba(0, 7, 15, 0.85) 80%,
+    #00070f 100%
+  );
+}
+
+.principles-bottom-cta-container {
+  position: relative;
+  z-index: 2;
+}
+
+.principles-bottom-cta-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Left Block */
+.bottom-cta-left {
+  flex: 1;
+  text-align: left;
+}
+
+.bottom-cta-left-main {
+  font-family: var(--font-tamil);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 6px;
+  letter-spacing: 0.3px;
+}
+
+.bottom-cta-left-sub {
+  font-family: var(--font-tamil);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--gold-primary);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Center Block */
+.bottom-cta-center {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+  flex: 1.2;
+}
+
+.bottom-cta-logo {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 10px rgba(232, 168, 56, 0.35));
+}
+
+.bottom-cta-brand-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.bottom-cta-brand-title {
+  font-family: var(--font-primary, sans-serif);
+  font-size: 1.65rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 1.5px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.bottom-cta-brand-tagline {
+  font-family: var(--font-tamil);
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 2px 0 0 0;
+}
+
+/* Right Block */
+.bottom-cta-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  flex: 1;
+}
+
+.bottom-cta-right-heading {
+  font-family: var(--font-tamil);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.bottom-cta-btn {
+  background-color: var(--gold-primary);
+  color: #00070f;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-family: var(--font-primary, sans-serif);
+  font-weight: 800;
+  font-size: 0.88rem;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 14px rgba(232, 168, 56, 0.35);
+}
+
+.bottom-cta-btn:hover {
+  background-color: #ffffff;
+  color: #00070f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Social Row */
+.bottom-cta-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bottom-cta-social-label {
+  font-family: var(--font-primary, sans-serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.bottom-cta-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.social-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.25s ease, filter 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.social-circle:hover {
+  transform: translateY(-2px) scale(1.1);
+  filter: brightness(1.15);
+}
+
+.social-circle.fb { background-color: #1877f2; }
+.social-circle.tw { background-color: #1da1f2; }
+.social-circle.ig { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+.social-circle.yt { background-color: #ff0000; }
+.social-circle.wa { background-color: #25d366; }
+.social-circle.tg { background-color: #0088cc; }
+
+/* Responsive adjustments for Bottom CTA Banner */
+@media (max-width: 992px) {
+  .principles-bottom-cta-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .bottom-cta-left {
+    text-align: center;
+  }
+
+  .bottom-cta-center {
+    justify-content: center;
+  }
+
+  .bottom-cta-right {
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .principles-bottom-cta-section {
+    padding: 30px 15px;
+  }
+
+  .bottom-cta-left-main {
+    font-size: 1.2rem;
+  }
+
+  .bottom-cta-left-sub {
+    font-size: 0.95rem;
+  }
+
+  .bottom-cta-brand-title {
+    font-size: 1.35rem;
+  }
+
+  .bottom-cta-brand-tagline {
+    font-size: 0.88rem;
+  }
+
+  .bottom-cta-logo {
+    height: 44px;
+  }
+
+  .bottom-cta-social {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+
+
 
 
