@@ -5,6 +5,8 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Vision from "./pages/Vision/Vision";
 import Principles from "./pages/Principles/Principles";
+import Parliament from "./pages/Parliament/Parliament";
+import Projects from "./pages/Projects/Projects";
 import "./App.css";
 
 function AppContent() {
@@ -12,7 +14,9 @@ function AppContent() {
   const hideFooter =
     location.pathname === "/about" ||
     location.pathname === "/vision" ||
-    location.pathname === "/principles";
+    location.pathname === "/principles" ||
+    location.pathname === "/peoples-parliament" ||
+    location.pathname === "/projects";
 
   return (
     <>
@@ -22,6 +26,8 @@ function AppContent() {
         <Route path="/about" element={<About />} />
         <Route path="/vision" element={<Vision />} />
         <Route path="/principles" element={<Principles />} />
+        <Route path="/peoples-parliament" element={<Parliament />} />
+        <Route path="/projects" element={<Projects />} />
       </Routes>
       {!hideFooter && <Footer />}
     </>

@@ -1,0 +1,2225 @@
+/* ============================================
+   PEOPLE'S PARLIAMENT PAGE
+   ============================================ */
+
+.parliament-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--black-bg);
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.parliament-hero-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  overflow: hidden;
+}
+
+.parliament-hero-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex: 1;
+  position: relative;
+}
+
+/* --- Left Content --- */
+.parliament-hero-left {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 10;
+  background-color: #000000;
+}
+
+.parliament-hero-left-content {
+  width: 100%;
+  max-width: 700px;
+  padding: 40px 50px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.parliament-tag {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  letter-spacing: 4px;
+  display: block;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.parliament-hero-title {
+  font-family: var(--font-tamil);
+  font-size: 3.2rem;
+  font-weight: 900;
+  line-height: 1.2;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.parliament-hero-title-highlight {
+  color: var(--gold-primary);
+  display: block;
+}
+
+.parliament-hero-description {
+  font-family: var(--font-tamil);
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--white-muted);
+  margin-bottom: 10px;
+  max-width: 520px;
+}
+
+.parliament-hero-description .highlight-text {
+  color: var(--gold-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(232, 168, 56, 0.4);
+  text-underline-offset: 3px;
+}
+
+/* --- Right Image Area --- */
+.parliament-hero-right {
+  width: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.parliament-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* Gradient overlay on the image for blending */
+.parliament-hero-right::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 100%;
+  background: linear-gradient(to right, #000000 0%, transparent 100%);
+  z-index: 2;
+}
+
+.parliament-hero-right::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to top, #000000 0%, transparent 100%);
+  z-index: 2;
+}
+
+/* --- Tea Shop Newspaper Badge --- */
+.parliament-teashop-badge {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 180px;
+  height: auto;
+  z-index: 5;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  transform: rotate(3deg);
+  transition: transform 0.4s ease;
+}
+
+.parliament-teashop-badge:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.parliament-teashop-badge img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Quote Bubble --- */
+.parliament-quote-bubble {
+  position: absolute;
+  bottom: 80px;
+  right: 40px;
+  z-index: 5;
+  background: var(--gold-primary);
+  color: #000000;
+  padding: 16px 24px;
+  border-radius: 20px 20px 4px 20px;
+  max-width: 280px;
+  box-shadow: 0 8px 32px rgba(232, 168, 56, 0.3);
+  animation: quotePulse 3s ease-in-out infinite;
+}
+
+.parliament-quote-bubble::before {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  right: 24px;
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 0px solid transparent;
+  border-top: 14px solid var(--gold-primary);
+}
+
+.parliament-quote-text {
+  font-family: var(--font-tamil);
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.5;
+  text-align: center;
+}
+
+@keyframes quotePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+/* ============================================
+   STATS BAR (SECTION 2)
+   ============================================ */
+.parliament-stats-section {
+  width: 100%;
+  background-color:#000000;
+  padding: 40px 24px 40px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 20;
+}
+
+.parliament-stats-card {
+  width: 100%;
+  max-width: 1260px;
+  background: #111112;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 22px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+.parliament-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  padding: 8px 16px;
+  position: relative;
+  justify-content: flex-start;
+  transition: transform 0.3s ease;
+}
+
+.parliament-stat-item:hover {
+  transform: translateY(-2px);
+}
+
+.parliament-stat-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+}
+
+.parliament-stat-icon-svg {
+  width: 34px;
+  height: 34px;
+  color: var(--gold-primary);
+  stroke-width: 1.8;
+}
+
+.parliament-stat-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.parliament-stat-number {
+  font-family: var(--font-primary), sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--gold-primary);
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+}
+
+.parliament-stat-label {
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #d1d5db;
+  line-height: 1.3;
+  margin-top: 4px;
+  white-space: pre-line;
+}
+
+.parliament-stat-divider {
+  position: absolute;
+  right: 0;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+
+/* ============================================
+   SECTION 3: HOW IT WORKS & LIVE POLL
+   ============================================ */
+.parliament-interactive-section {
+  width: 100%;
+  background-color: #000000;
+  padding: 10px 24px 60px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 20;
+}
+
+.parliament-interactive-container {
+  width: 100%;
+  max-width: 1260px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: 18px;
+}
+
+.parliament-card {
+  background: #111112;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 24px 26px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+/* Left Card: Workflow */
+.parliament-workflow-card {
+  justify-content: space-between;
+}
+
+.parliament-card-title {
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 28px;
+  letter-spacing: 0.2px;
+}
+
+.parliament-workflow-steps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 100%;
+}
+
+.parliament-workflow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.parliament-step-icon-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold-primary);
+  background: #09090a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  box-shadow: 0 0 15px rgba(232, 168, 56, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
+
+.parliament-workflow-step:hover .parliament-step-icon-circle {
+  transform: scale(1.06);
+  box-shadow: 0 0 20px rgba(232, 168, 56, 0.3);
+}
+
+.parliament-step-icon {
+  width: 26px;
+  height: 26px;
+  color: var(--gold-primary);
+  stroke-width: 1.8;
+}
+
+.parliament-step-title {
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  margin-bottom: 6px;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.parliament-step-desc {
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 0.65rem;
+  color: #a1a1aa;
+  line-height: 1.35;
+  text-align: center;
+  max-width: 125px;
+  word-break: break-word;
+}
+
+.parliament-step-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  flex-shrink: 0;
+  padding: 0 2px;
+}
+
+.parliament-arrow-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--gold-primary);
+  opacity: 0.85;
+}
+
+/* Right Card: Poll */
+.parliament-poll-card {
+  justify-content: space-between;
+}
+
+.parliament-poll-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.parliament-poll-subtitle {
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.parliament-live-badge {
+  background: #d92d20;
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  letter-spacing: 0.8px;
+}
+
+.parliament-live-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  animation: liveBlink 1.2s infinite ease-in-out;
+}
+
+@keyframes liveBlink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(0.8); }
+}
+
+.parliament-poll-question {
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.35;
+  margin-bottom: 20px;
+}
+
+.parliament-poll-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.parliament-poll-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.parliament-poll-label {
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 0.70rem;
+  color: #d1d5db;
+  width: 155px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.parliament-poll-bar-wrapper {
+  flex: 1;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.parliament-poll-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #E8A838 0%, #F5C563 100%);
+  border-radius: 10px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.parliament-poll-percent {
+  font-family: var(--font-primary), sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  width: 36px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.parliament-poll-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 14px;
+}
+
+.parliament-poll-voters {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 0.8rem;
+  color: var(--gold-primary);
+}
+
+.parliament-voter-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--gold-primary);
+}
+
+.parliament-vote-btn {
+  background: var(--gold-primary);
+  color: #000000;
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 0.88rem;
+  font-weight: 800;
+  padding: 8px 22px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(232, 168, 56, 0.2);
+}
+
+.parliament-vote-btn:hover {
+  background: #f5c563;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(232, 168, 56, 0.35);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1200px) {
+  .parliament-hero-title {
+    font-size: 2.6rem;
+  }
+  
+  .parliament-hero-description {
+    font-size: 0.92rem;
+  }
+
+  .parliament-stat-number {
+    font-size: 1.4rem;
+  }
+
+  .parliament-stat-label {
+    font-size: 0.75rem;
+  }
+
+  .parliament-stat-item {
+    gap: 10px;
+    padding: 6px 10px;
+  }
+
+  .parliament-stat-icon-svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .parliament-poll-label {
+    width: 135px;
+    font-size: 0.78rem;
+  }
+
+  .parliament-step-title {
+    font-size: 0.82rem;
+  }
+
+  .parliament-step-desc {
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .parliament-hero-section {
+    min-height: auto;
+    padding-bottom: 20px;
+  }
+
+  .parliament-hero-container {
+    flex-direction: column;
+  }
+
+  .parliament-hero-left {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .parliament-hero-left-content {
+    max-width: 100%;
+    padding: 40px 24px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .parliament-hero-description {
+    max-width: 100%;
+  }
+
+  .parliament-hero-right {
+    width: 100%;
+    height: 380px;
+  }
+
+  .parliament-hero-right::before {
+    display: none;
+  }
+
+  .parliament-hero-right::after {
+    height: 100px;
+  }
+
+  .parliament-teashop-badge {
+    width: 140px;
+    top: 16px;
+    right: 16px;
+  }
+
+  .parliament-quote-bubble {
+    bottom: 40px;
+    right: 20px;
+    max-width: 220px;
+    padding: 12px 18px;
+  }
+
+  .parliament-quote-text {
+    font-size: 0.9rem;
+  }
+
+  .parliament-stats-section {
+    padding: 24px 20px;
+  }
+
+  .parliament-stats-card {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px 20px;
+    gap: 0;
+  }
+
+  .parliament-stat-item {
+    flex: 0 0 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 18px;
+    padding: 14px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .parliament-stat-item:last-child {
+    border-bottom: none;
+  }
+
+  .parliament-stat-divider {
+    display: none;
+  }
+
+  .parliament-stat-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    background: rgba(232, 168, 56, 0.1);
+    border: 1px solid rgba(232, 168, 56, 0.25);
+    border-radius: 10px;
+  }
+
+  .parliament-stat-icon-svg {
+    width: 26px;
+    height: 26px;
+    color: var(--gold-primary);
+  }
+
+  .parliament-stat-number {
+    font-size: 1.45rem;
+    font-weight: 800;
+  }
+
+  .parliament-stat-label {
+    font-size: 0.85rem;
+    line-height: 1.35;
+    margin-top: 2px;
+  }
+
+  .parliament-interactive-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .parliament-hero-section {
+    padding-top: 70px;
+  }
+
+  .parliament-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .parliament-hero-description br {
+    display: none;
+  }
+
+  .parliament-hero-right {
+    height: 320px;
+  }
+
+  .parliament-stats-section {
+    padding: 20px 16px;
+  }
+
+  .parliament-stats-card {
+    padding: 8px 16px;
+  }
+
+  .parliament-stat-item {
+    gap: 16px;
+    padding: 14px 8px;
+  }
+
+  .parliament-stat-icon-wrapper {
+    width: 46px;
+    height: 46px;
+  }
+
+  .parliament-stat-icon-svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .parliament-stat-number {
+    font-size: 1.4rem;
+  }
+
+  .parliament-stat-label {
+    font-size: 0.8rem;
+  }
+
+  .parliament-workflow-steps {
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-between;
+  }
+
+  .parliament-step-arrow {
+    display: none;
+  }
+
+  .parliament-workflow-step {
+    flex: 0 0 calc(50% - 10px);
+    text-align: center;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .parliament-step-desc {
+    max-width: 100%;
+    font-size: 0.72rem;
+  }
+
+  .parliament-poll-item {
+    gap: 8px;
+  }
+
+  .parliament-poll-label {
+    width: 110px;
+    font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .parliament-hero-left-content {
+    padding: 24px 16px;
+  }
+
+  .parliament-hero-title {
+    font-size: 1.8rem;
+  }
+
+  .parliament-hero-description {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .parliament-hero-right {
+    height: 270px;
+  }
+
+  .parliament-teashop-badge {
+    width: 100px;
+    top: 12px;
+    right: 12px;
+  }
+
+  .parliament-quote-bubble {
+    bottom: 20px;
+    right: 12px;
+    max-width: 170px;
+    padding: 10px 12px;
+  }
+
+  .parliament-quote-text {
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+
+  .parliament-stats-section {
+    padding: 16px 12px;
+  }
+
+  .parliament-stats-card {
+    padding: 6px 12px;
+  }
+
+  .parliament-stat-item {
+    gap: 14px;
+    padding: 12px 4px;
+  }
+
+  .parliament-stat-icon-wrapper {
+    width: 42px;
+    height: 42px;
+  }
+
+  .parliament-stat-icon-svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .parliament-stat-number {
+    font-size: 1.3rem;
+  }
+
+  .parliament-stat-label {
+    font-size: 0.78rem;
+  }
+
+  .parliament-card-title {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  .parliament-workflow-step {
+    flex: 0 0 calc(50% - 8px);
+  }
+
+  .parliament-step-icon-circle {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .parliament-step-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .parliament-poll-item {
+    flex-wrap: wrap;
+    gap: 4px 6px;
+  }
+
+  .parliament-poll-label {
+    width: 100%;
+    font-size: 0.78rem;
+    font-weight: 600;
+  }
+
+  .parliament-poll-bar-wrapper {
+    flex: 1;
+    height: 7px;
+  }
+
+  .parliament-poll-percent {
+    width: 36px;
+    font-size: 0.85rem;
+  }
+
+  .parliament-poll-footer {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .parliament-poll-voters {
+    font-size: 0.78rem;
+    justify-content: center;
+  }
+
+  .parliament-vote-btn {
+    width: 100%;
+    max-width: 280px;
+    font-size: 0.85rem;
+    padding: 10px 16px;
+  }
+}
+
+/* ============================================
+   SECTION 4: PEOPLE'S VOICE
+   ============================================ */
+.parliament-voice-section {
+  width: 100%;
+  background-color: #000000;
+  padding: 10px 24px 60px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 20;
+}
+
+.parliament-voice-container {
+  width: 100%;
+  max-width: 1260px;
+}
+
+.parliament-voice-card-wrapper {
+  background: #111112;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 24px 26px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.parliament-voice-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.parliament-voice-title {
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.parliament-voice-title-en {
+  font-family: var(--font-primary), sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  letter-spacing: 1px;
+}
+
+.parliament-voice-see-all {
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gold-primary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.parliament-voice-see-all:hover {
+  color: #f5c563;
+  transform: translateX(3px);
+}
+
+.parliament-see-all-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.parliament-voice-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+
+.parliament-voice-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #0a0a0b;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.parliament-voice-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(232, 168, 56, 0.5);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+}
+
+.parliament-voice-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.4s ease;
+}
+
+.parliament-voice-card:hover .parliament-voice-img {
+  transform: scale(1.05);
+}
+
+.parliament-voice-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.5) 45%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  pointer-events: none;
+}
+
+.parliament-voice-play-btn {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding-left: 2px;
+}
+
+.parliament-voice-card:hover .parliament-voice-play-btn {
+  background: var(--gold-primary);
+  border-color: var(--gold-primary);
+  color: #000000;
+  transform: translate(-50%, -50%) scale(1.12);
+  box-shadow: 0 0 16px rgba(232, 168, 56, 0.5);
+}
+
+.parliament-play-icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.parliament-voice-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 10px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.parliament-voice-role {
+  font-family: var(--font-primary), sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.parliament-voice-quote {
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 0.7rem;
+  color: #ffffff;
+  line-height: 1.35;
+}
+
+.parliament-voice-duration {
+  font-family: var(--font-primary), sans-serif;
+  font-size: 0.68rem;
+  color: #a1a1aa;
+  align-self: flex-end;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+/* Section 4 Responsive Media Queries */
+@media (max-width: 1200px) {
+  .parliament-voice-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .parliament-voice-card {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .parliament-voice-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .parliament-voice-card {
+    height: 240px;
+  }
+
+  .parliament-voice-title {
+    font-size: 1.1rem;
+  }
+
+  .parliament-voice-title-en {
+    font-size: 0.82rem;
+  }
+
+  .parliament-voice-quote {
+    font-size: 0.72rem;
+    line-height: 1.3;
+  }
+
+  .parliament-voice-info {
+    padding: 10px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .parliament-voice-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+
+  .parliament-voice-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .parliament-voice-card {
+    height: 210px;
+  }
+
+  .parliament-voice-role {
+    font-size: 0.65rem;
+  }
+
+  .parliament-voice-quote {
+    font-size: 0.68rem;
+    line-height: 1.25;
+  }
+
+  .parliament-voice-duration {
+    font-size: 0.62rem;
+  }
+
+  .parliament-voice-see-all {
+    font-size: 0.78rem;
+  }
+}
+
+/* ============================================
+   SECTION 5: PEOPLE'S AGENDA & LIVE MAP
+   ============================================ */
+.parliament-agenda-section {
+  width: 100%;
+  background-color: #000000;
+  padding: 10px 24px 60px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 20;
+}
+
+.parliament-agenda-container {
+  width: 100%;
+  max-width: 1260px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: 18px;
+}
+
+.parliament-card-title-en {
+  font-family: var(--font-primary), sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  letter-spacing: 0.8px;
+  margin-left: 6px;
+}
+
+/* Left Card: People's Agenda */
+.parliament-agenda-card {
+  justify-content: space-between;
+}
+
+.parliament-agenda-body {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 16px;
+  flex: 1;
+  align-items: stretch;
+  margin-top: 16px;
+}
+
+.parliament-agenda-list-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  flex: 1;
+}
+
+.parliament-agenda-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.parliament-agenda-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.parliament-agenda-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(232, 168, 56, 0.3);
+}
+
+.parliament-agenda-badge {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--gold-primary);
+  color: #000000;
+  font-family: var(--font-primary), sans-serif;
+  font-weight: 800;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.parliament-agenda-label {
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 0.78rem;
+  color: #ffffff;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.parliament-agenda-count {
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 0.72rem;
+  color: #a1a1aa;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.parliament-agenda-btn {
+  background: var(--gold-primary);
+  color: #000000;
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(232, 168, 56, 0.2);
+  margin-top: auto;
+  text-align: center;
+}
+
+.parliament-agenda-btn:hover {
+  background: #f5c563;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(232, 168, 56, 0.35);
+}
+
+/* Center: Crowd Banner */
+.parliament-center-banner {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.parliament-center-banner-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  filter: brightness(0.45) contrast(1.2) saturate(1.3);
+}
+
+.parliament-center-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.15) 30%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  z-index: 1;
+}
+
+.parliament-center-banner-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 24px 16px;
+}
+
+.parliament-center-line1 {
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 1.65rem;
+  font-weight: 900;
+  color: var(--gold-primary);
+  margin: 0;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9), 0 0 30px rgba(232, 168, 56, 0.25);
+  line-height: 1.3;
+}
+
+.parliament-center-line2 {
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 1.65rem;
+  font-weight: 900;
+  color: var(--gold-primary);
+  margin: 0;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9), 0 0 30px rgba(232, 168, 56, 0.25);
+  line-height: 1.3;
+}
+
+.parliament-center-line3 {
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--gold-primary);
+  margin: 0;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.9), 0 0 40px rgba(232, 168, 56, 0.35);
+  line-height: 1.3;
+}
+
+/* Right Card: Live Map */
+.parliament-map-card {
+  justify-content: space-between;
+}
+
+.parliament-map-body {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 16px;
+  flex: 1;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.parliament-map-visual-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.parliament-map-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 230px;
+}
+
+.parliament-map-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.9) contrast(1.1);
+}
+
+/* Pin Positioning */
+.parliament-map-pin {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pin-chennai {
+  top: 18%;
+  right: 18%;
+}
+
+.pin-madurai {
+  top: 62%;
+  left: 44%;
+}
+
+.pin-coimbatore {
+  top: 50%;
+  left: 22%;
+}
+
+.pin-salem {
+  top: 38%;
+  left: 40%;
+}
+
+.pin-tirunelveli {
+  top: 80%;
+  left: 36%;
+}
+
+.parliament-pin-icon {
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8));
+}
+
+.parliament-pin-icon.red {
+  color: #ef4444;
+}
+
+.parliament-pin-icon.gold {
+  color: #e8a838;
+}
+
+.parliament-pin-icon.green {
+  color: #22c55e;
+}
+
+.parliament-pin-pulse {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  animation: pinPulse 1.8s infinite ease-out;
+}
+
+.parliament-pin-pulse.red {
+  background: rgba(239, 68, 68, 0.45);
+}
+
+.parliament-pin-pulse.gold {
+  background: rgba(232, 168, 56, 0.45);
+}
+
+.parliament-pin-pulse.green {
+  background: rgba(34, 197, 94, 0.45);
+}
+
+@keyframes pinPulse {
+  0% { transform: scale(0.6); opacity: 1; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+
+.parliament-map-stats-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  height: 100%;
+}
+
+.parliament-city-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.parliament-city-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 8px;
+}
+
+.parliament-city-name {
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 0.82rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.parliament-city-count {
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 0.74rem;
+  color: #a1a1aa;
+}
+
+.parliament-map-btn {
+  background: var(--gold-primary);
+  color: #000000;
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(232, 168, 56, 0.2);
+  margin-top: auto;
+  text-align: center;
+}
+
+.parliament-map-btn:hover {
+  background: #f5c563;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(232, 168, 56, 0.35);
+}
+
+.parliament-btn-arrow {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Responsive Media Queries for Section 5 */
+@media (max-width: 1024px) {
+  .parliament-agenda-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .parliament-agenda-body,
+  .parliament-map-body {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .parliament-center-banner {
+    min-height: 200px;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .parliament-map-wrapper {
+    max-width: 230px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .parliament-agenda-item {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  .parliament-agenda-label {
+    white-space: normal;
+    line-height: 1.35;
+    font-size: 0.78rem;
+  }
+
+  .parliament-agenda-count {
+    font-size: 0.72rem;
+    font-weight: 600;
+  }
+
+  .parliament-agenda-btn,
+  .parliament-map-btn {
+    width: 100%;
+    font-size: 0.84rem;
+    padding: 10px 14px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .parliament-center-banner {
+    min-height: 180px;
+  }
+
+  .parliament-center-line1,
+  .parliament-center-line2 {
+    font-size: 1.3rem;
+  }
+
+  .parliament-center-line3 {
+    font-size: 1.6rem;
+  }
+
+  .parliament-map-wrapper {
+    max-width: 190px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .parliament-center-banner {
+    min-height: 160px;
+  }
+
+  .parliament-center-line1,
+  .parliament-center-line2 {
+    font-size: 1.15rem;
+  }
+
+  .parliament-center-line3 {
+    font-size: 1.45rem;
+  }
+
+  .parliament-map-wrapper {
+    max-width: 170px;
+  }
+
+  .parliament-pin-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .parliament-pin-pulse {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* ============================================
+   SECTION 6: CTA SECTION
+   ============================================ */
+.parliament-cta-section {
+  width: 100%;
+  background-color: #000000;
+  padding: 10px 24px 0 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 20;
+}
+
+.parliament-cta-card {
+  width: 100%;
+  max-width: 1260px;
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(232, 168, 56, 0.45);
+  background: #09090a;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.parliament-cta-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 48%;
+  filter: brightness(0.88) contrast(1.15) saturate(1.25);
+  z-index: 0;
+}
+
+.parliament-cta-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.90) 0%,
+    rgba(0, 0, 0, 0.60) 40%,
+    rgba(0, 0, 0, 0.20) 70%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+  z-index: 1;
+}
+
+.parliament-cta-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 26px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.parliament-cta-left-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.parliament-cta-quote {
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+.parliament-cta-subquote {
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  margin: 0 0 20px 0;
+  line-height: 1.4;
+}
+
+.parliament-cta-values {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.parliament-cta-value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.parliament-cta-value-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold-primary);
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.parliament-cta-value-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 18px rgba(232, 168, 56, 0.4);
+}
+
+.parliament-cta-value-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--gold-primary);
+  stroke-width: 2;
+}
+
+.parliament-cta-value-circle-tamil {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.parliament-cta-tamil-letter {
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: var(--gold-primary);
+  line-height: 1;
+}
+
+.parliament-cta-value-circle-india {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.parliament-cta-india-flag {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.parliament-cta-value-label {
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #d1d5db;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
+/* Right Content */
+.parliament-cta-right-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.parliament-cta-right-text {
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.parliament-cta-join-btn {
+  background: var(--gold-primary);
+  color: #000000;
+  font-family: var(--font-primary), sans-serif;
+  font-size: 0.88rem;
+  font-weight: 800;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(232, 168, 56, 0.25);
+}
+
+.parliament-cta-join-btn:hover {
+  background: #f5c563;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(232, 168, 56, 0.4);
+}
+
+.parliament-cta-join-arrow {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   FOOTER BAR
+   ============================================ */
+.parliament-footer-bar {
+  width: 100%;
+  background: linear-gradient(180deg, #0a0a0b 0%, #111112 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 16px 24px;
+  margin-top: 18px;
+}
+
+.parliament-footer-bar-inner {
+  max-width: 1260px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.parliament-footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.parliament-footer-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.parliament-footer-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.parliament-footer-brand-name {
+  font-family: var(--font-primary), sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--gold-primary);
+  letter-spacing: 1.5px;
+}
+
+.parliament-footer-brand-tagline {
+  font-family: var(--font-tamil), sans-serif;
+  font-size: 0.65rem;
+  color: #a1a1aa;
+  font-weight: 500;
+}
+
+/* Social Icons */
+.parliament-footer-social {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.parliament-footer-social-label {
+  font-family: var(--font-primary), sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #a1a1aa;
+  letter-spacing: 1px;
+  margin-right: 4px;
+}
+
+.parliament-footer-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.parliament-footer-social-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.parliament-footer-social-icon.fb,
+.parliament-footer-social-icon.facebook {
+  background-color: #1877f2;
+}
+
+.parliament-footer-social-icon.tw,
+.parliament-footer-social-icon.twitter {
+  background-color: #1da1f2;
+}
+
+.parliament-footer-social-icon.ig,
+.parliament-footer-social-icon.instagram {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+}
+
+.parliament-footer-social-icon.yt,
+.parliament-footer-social-icon.youtube {
+  background-color: #ff0000;
+}
+
+.parliament-footer-social-icon.wa,
+.parliament-footer-social-icon.whatsapp {
+  background-color: #25d366;
+}
+
+.parliament-footer-social-icon.tg,
+.parliament-footer-social-icon.telegram {
+  background-color: #0088cc;
+}
+
+.parliament-footer-social-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.parliament-footer-social-icon:hover {
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  filter: brightness(1.15);
+}
+
+/* Tagline */
+.parliament-footer-tagline {
+  font-family: var(--font-primary), sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.parliament-footer-tagline em {
+  color: var(--gold-primary);
+  font-style: italic;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN (CTA & FOOTER BAR)
+   ============================================ */
+@media (max-width: 1024px) {
+  .parliament-cta-card {
+    min-height: auto;
+  }
+
+  .parliament-cta-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 24px;
+    gap: 24px;
+  }
+
+  .parliament-cta-bg-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.92) 0%,
+      rgba(0, 0, 0, 0.65) 50%,
+      rgba(0, 0, 0, 0.88) 100%
+    );
+  }
+
+  .parliament-cta-left-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .parliament-cta-values {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px 22px;
+  }
+
+  .parliament-cta-right-content {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .parliament-cta-right-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .parliament-cta-section {
+    padding: 10px 16px 0 16px;
+  }
+
+  .parliament-cta-inner {
+    padding: 24px 16px;
+    gap: 20px;
+  }
+
+  .parliament-cta-quote {
+    font-size: 1.25rem;
+  }
+
+  .parliament-cta-subquote {
+    font-size: 0.98rem;
+    margin-bottom: 16px;
+  }
+
+  .parliament-cta-values {
+    gap: 14px 16px;
+  }
+
+  .parliament-footer-bar {
+    padding: 20px 16px;
+  }
+
+  .parliament-footer-bar-inner {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .parliament-footer-brand {
+    justify-content: center;
+  }
+
+  .parliament-footer-social {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px 14px;
+  }
+
+  .parliament-footer-social-label {
+    margin-right: 0;
+  }
+
+  .parliament-footer-tagline {
+    font-size: 0.78rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .parliament-cta-card {
+    border-radius: 12px;
+  }
+
+  .parliament-cta-inner {
+    padding: 20px 14px;
+    gap: 18px;
+  }
+
+  .parliament-cta-quote {
+    font-size: 1.1rem;
+  }
+
+  .parliament-cta-subquote {
+    font-size: 0.88rem;
+  }
+
+  .parliament-cta-values {
+    gap: 12px 10px;
+  }
+
+  .parliament-cta-value-circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .parliament-cta-value-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .parliament-cta-tamil-letter,
+  .parliament-cta-india-flag {
+    font-size: 1.05rem;
+  }
+
+  .parliament-cta-value-label {
+    font-size: 0.65rem;
+  }
+
+  .parliament-cta-right-text {
+    font-size: 0.95rem;
+  }
+
+  .parliament-cta-join-btn {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+    padding: 11px 18px;
+    font-size: 0.82rem;
+  }
+
+  .parliament-footer-social {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px 12px;
+  }
+
+  .parliament-footer-social-label {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2px;
+  }
+
+  .parliament-footer-social-icons {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
