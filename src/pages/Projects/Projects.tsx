@@ -234,18 +234,18 @@ const Projects: React.FC = () => {
             {/* Main Headline */}
             <h1 className="projects-hero-title">
               சொல்வதல்ல,
-              <br />
+              <br className="hero-br-desktop" />
               செய்வதில்தான்
-              <br />
+              <br className="hero-br-desktop" />
               <span className="title-highlight">எங்கள் நம்பிக்கை!</span>
             </h1>
 
             {/* Subtitle / Description */}
             <p className="projects-hero-description">
               மக்களின் உண்மையான பிரச்சினைகளுக்கான
-              <br />
+              <br className="hero-br-desktop" />
               நிலையான தீர்வுகளை உருவாக்குவதற்காக,
-              <br />
+              <br className="hero-br-desktop" />
               எங்கள் திட்டங்கள் மக்களுடன் இணைந்து செயல்படுகின்றன.
             </p>
 
@@ -522,7 +522,7 @@ const Projects: React.FC = () => {
             <div className="cta-text-group">
               <h2 className="cta-title">
                 இந்த மாற்றப் பயணத்தில்
-                <br />
+                <br className="hero-br-desktop" />
                 நீங்களும் இணைவீர்களா?
               </h2>
               <p className="cta-subtitle">

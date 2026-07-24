@@ -34,7 +34,7 @@ const Navbar = () => {
     { label: "Our Principles", href: "/principles" },
     { label: "People's Parliament", href: "/peoples-parliament" },
     { label: "Projects", href: "/projects" },
-    { label: "Media", href: "/#media" },
+    { label: "Media", href: "/media" },
     { label: "Join Us", href: "/#join" },
   ];
 

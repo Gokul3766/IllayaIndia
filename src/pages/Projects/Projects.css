@@ -15,11 +15,11 @@
    ============================================ */
 .projects-hero-section {
   position: relative;
-  min-height: 85vh;
+  min-height: auto;
   width: 100%;
   display: flex;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 110px;
   padding-bottom: 50px;
   overflow: hidden;
   background-color: #050505;
@@ -70,10 +70,11 @@
   z-index: 10;
   max-width: 1400px;
   margin: 0 auto;
-  min-height: calc(80vh - 100px);
+  min-height: auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .projects-hero-content-wrapper {
@@ -197,18 +198,18 @@
   bottom: 10px;
   z-index: 15;
   background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
-  padding: 10px 22px 10px 16px;
+  padding: 12px 24px 12px 18px;
   color: #000000;
-  border-radius: 6px;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), 0 4px 10px rgba(245, 158, 11, 0.3);
-  clip-path: polygon(1% 4%, 99% 0%, 100% 95%, 0% 100%);
+  border-radius: 10px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), 0 4px 14px rgba(245, 158, 11, 0.35);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
   transform: rotate(-1.5deg);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .projects-hero-brush-badge:hover {
   transform: rotate(0deg) scale(1.03);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 6px 16px rgba(245, 158, 11, 0.4);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 6px 18px rgba(245, 158, 11, 0.45);
 }
 
 .brush-badge-content {
@@ -1024,25 +1025,44 @@
 /* ============================================
    RESPONSIVE DESIGN
    ============================================ */
+/* ============================================
+   RESPONSIVE DESIGN (MOBILE & TABLET OPTIMIZED)
+   ============================================ */
+
+/* 1. Large Desktops & Laptops (1200px to 1400px) */
 @media (max-width: 1400px) {
   .projects-grid {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 14px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
   }
 
   .project-card-title {
     font-size: 0.88rem;
   }
+
+  .cta-banner-wrapper {
+    max-width: 1200px;
+  }
 }
 
+/* 2. Medium Desktops & Landscape Tablets (992px to 1200px) */
 @media (max-width: 1200px) {
   .projects-hero-title {
-    font-size: 2.4rem;
+    font-size: 2.5rem;
+  }
+
+  .projects-hero-brush-badge {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-top: 24px;
+    align-self: flex-start;
+    transform: none;
   }
 
   .projects-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    gap: 18px;
   }
 
   .impact-metrics-row {
@@ -1052,129 +1072,317 @@
 
   .impact-metric-item {
     border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 14px;
+    padding-top: 14px;
   }
 
   .impact-metric-item:nth-child(3n) {
     border-right: none;
   }
+
+  .impact-metric-item:nth-child(4),
+  .impact-metric-item:nth-child(5),
+  .impact-metric-item:nth-child(6) {
+    border-bottom: none;
+  }
 }
 
+/* 3. Tablets (Portrait & Medium Screens: 768px to 992px) */
 @media (max-width: 992px) {
+  .hero-br-desktop {
+    display: none;
+  }
+
   .projects-hero-section {
     min-height: auto;
-    padding-top: 90px;
-    padding-bottom: 100px;
+    padding-top: 95px;
+    padding-bottom: 50px;
+  }
+
+  .projects-hero-bg-img {
+    object-position: center center;
+  }
+
+  .projects-hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(5, 5, 5, 0.95) 0%,
+      rgba(5, 5, 5, 0.88) 50%,
+      rgba(5, 5, 5, 0.96) 100%
+    );
+  }
+
+  .projects-hero-content-wrapper {
+    max-width: 100%;
   }
 
   .projects-hero-title {
     font-size: 2.2rem;
+    line-height: 1.25;
   }
 
   .projects-hero-description {
-    font-size: 0.88rem;
-    margin-bottom: 30px;
+    font-size: 0.9rem;
+    max-width: 100%;
+    margin-bottom: 28px;
   }
 
   .projects-hero-stats {
-    gap: 14px;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 16px;
+    width: 100%;
+  }
+
+  .projects-stat-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(232, 168, 56, 0.2);
+    padding: 10px 14px;
+    border-radius: 8px;
   }
 
   .projects-hero-brush-badge {
     position: relative;
     right: auto;
     bottom: auto;
-    margin-top: 36px;
+    margin-top: 24px;
     align-self: flex-start;
-    clip-path: polygon(0% 2%, 100% 0%, 98% 98%, 1% 96%);
+    width: fit-content;
+    max-width: 100%;
+    transform: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(245, 158, 11, 0.3);
   }
 
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 18px;
   }
 
   .projects-section-title {
     font-size: 1.35rem;
   }
 
+  .ornamental-line {
+    max-width: 120px;
+  }
+
   .projects-details-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 24px;
+  }
+
+  .photo-thumb-container {
+    height: auto;
+    aspect-ratio: 4 / 3;
   }
 
   .impact-banner-card {
-    padding: 20px 16px;
+    padding: 22px 20px;
   }
 
   .impact-banner-title {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
+    line-height: 1.35;
+    margin-bottom: 16px;
+    text-align: center;
   }
 
-  .cta-banner-wrapper {
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-
-  .cta-subtitle {
-    white-space: normal;
-  }
-}
-
-@media (max-width: 768px) {
   .impact-metrics-row {
     grid-template-columns: repeat(2, 1fr);
     gap: 14px 0;
   }
 
   .impact-metric-item {
+    padding: 12px 16px;
+    justify-content: flex-start;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .impact-metric-item:nth-child(2n) {
     border-right: none;
   }
+
+  .impact-metric-item:nth-child(5),
+  .impact-metric-item:nth-child(6) {
+    border-bottom: none;
+  }
+
+  .cta-text-group {
+    width: 100%;
+  }
+
+  .cta-subtitle {
+    white-space: normal;
+  }
+
+  .cta-buttons-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    width: 100%;
+  }
+
+  .cta-btn {
+    width: 100%;
+    justify-content: center;
+    white-space: normal;
+  }
+
+  .btn-text-wrapper {
+    text-align: center;
+  }
+
+  .footer-bar-inner {
+    gap: 16px;
+  }
 }
 
+/* 4. Small Tablets & Large Phones (576px to 768px) */
+@media (max-width: 768px) {
+  .projects-hero-title {
+    font-size: 1.95rem;
+  }
+
+  .projects-section-header {
+    gap: 10px;
+  }
+
+  .ornamental-line {
+    max-width: 80px;
+  }
+
+  .impact-metrics-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 0;
+  }
+
+  .impact-metric-item {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .impact-metric-item:nth-child(2n) {
+    border-right: none;
+  }
+
+  .impact-metric-item:nth-child(5),
+  .impact-metric-item:nth-child(6) {
+    border-bottom: none;
+  }
+
+  .cta-buttons-group {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .cta-btn {
+    height: auto;
+    min-height: 48px;
+    padding: 10px 16px;
+  }
+
+  .footer-bar-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+  }
+
+  .footer-brand {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .footer-social-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .social-circle {
+    width: 34px;
+    height: 34px;
+    font-size: 0.9rem;
+  }
+}
+
+/* 5. Mobile Phones (320px to 576px) */
 @media (max-width: 576px) {
   .projects-hero-section {
-    padding-top: 85px;
-    padding-bottom: 36px;
+    padding-top: 80px;
+    padding-bottom: 32px;
+  }
+
+  .projects-hero-tag {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
   }
 
   .projects-hero-title {
-    font-size: 1.8rem;
-    line-height: 1.22;
+    font-size: 1.65rem;
+    line-height: 1.25;
+    margin-bottom: 12px;
   }
 
   .projects-hero-description {
-    font-size: 0.85rem;
-    line-height: 1.6;
-    margin-bottom: 24px;
+    font-size: 0.84rem;
+    line-height: 1.55;
+    margin-bottom: 20px;
   }
 
   .projects-hero-stats {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px 12px;
+    gap: 10px;
     width: 100%;
   }
 
+  .projects-stat-card {
+    padding: 8px 10px;
+    gap: 8px;
+  }
+
+  .stat-icon-wrapper {
+    width: 28px;
+    height: 28px;
+  }
+
+  .stat-icon {
+    width: 14px;
+    height: 14px;
+  }
+
   .stat-number {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 
   .stat-label {
-    font-size: 0.65rem;
+    font-size: 0.62rem;
   }
 
   .projects-hero-brush-badge {
     width: 100%;
-    margin-top: 28px;
+    margin-top: 20px;
     transform: none;
     clip-path: none;
-    border-radius: 6px;
-    padding: 10px 14px;
+    border-radius: 8px;
+    padding: 12px 14px;
+    text-align: center;
+  }
+
+  .brush-badge-content {
+    justify-content: center;
+  }
+
+  .badge-maintext {
+    font-size: 0.9rem;
   }
 
   .projects-grid {
@@ -1182,26 +1390,174 @@
     gap: 16px;
   }
 
+  .project-image-wrapper {
+    height: 155px;
+  }
+
+  .project-card-body {
+    padding: 0 14px 12px 14px;
+  }
+
+  .project-card-title {
+    font-size: 0.95rem;
+    min-height: auto;
+    margin-bottom: 6px;
+  }
+
+  .project-card-desc {
+    font-size: 0.74rem;
+    line-height: 1.5;
+  }
+
   .projects-section-header {
-    gap: 8px;
+    gap: 6px;
+    margin-bottom: 24px;
+  }
+
+  .ornamental-line {
+    max-width: 30px;
   }
 
   .projects-section-title {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
+  }
+
+  .impact-banner-card {
+    padding: 18px 14px;
+    border-radius: 10px;
+  }
+
+  .impact-banner-title {
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+  }
+
+  .impact-banner-divider {
+    margin-bottom: 16px;
   }
 
   .impact-metrics-row {
     grid-template-columns: 1fr;
-    gap: 14px 0;
+    gap: 10px;
   }
 
   .impact-metric-item {
     border-right: none !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    padding-bottom: 10px;
+    padding: 10px;
+    justify-content: flex-start;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 6px;
   }
 
   .impact-metric-item:last-child {
     border-bottom: none;
   }
+
+  .impact-number {
+    font-size: 1.25rem;
+  }
+
+  .impact-label {
+    font-size: 0.68rem;
+  }
+
+  .details-card {
+    padding: 18px 16px;
+    border-radius: 10px;
+  }
+
+  .details-card-title {
+    font-size: 1.02rem;
+  }
+
+  .impact-list-text,
+  .upcoming-list-text {
+    font-size: 0.76rem;
+  }
+
+  .details-card-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 14px;
+    font-size: 0.78rem;
+    margin-top: 16px;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .photo-thumb-container {
+    aspect-ratio: 4 / 3;
+  }
+
+  .cta-title {
+    font-size: 1.25rem;
+  }
+
+  .cta-subtitle {
+    font-size: 0.78rem;
+  }
+
+  .cta-buttons-group {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-btn {
+    width: 100%;
+    justify-content: center;
+    height: auto;
+    min-height: 48px;
+    padding: 10px 14px;
+  }
+
+  .footer-brand-title {
+    font-size: 1.1rem;
+  }
+
+  .footer-brand-subtitle {
+    font-size: 0.62rem;
+  }
+
+  .follow-us-label {
+    font-size: 0.8rem;
+  }
+
+  .social-circle {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+  }
+
+  .footer-tagline {
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+  }
 }
+
+/* 6. Extra Small Phones (<=380px) */
+@media (max-width: 380px) {
+  .projects-hero-title {
+    font-size: 1.45rem;
+  }
+
+  .projects-section-title {
+    font-size: 1.05rem;
+  }
+
+  .ornamental-line,
+  .ornamental-diamond {
+    display: none;
+  }
+
+  .projects-hero-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
