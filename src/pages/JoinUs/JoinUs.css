@@ -1,0 +1,1805 @@
+/* ==========================================================================
+   JOIN US PAGE STYLING - SECTIONS 1, 2, 3, 4 & 5 (CTA & FOOTER)
+   FULL RESPONSIVE SYSTEM (DESKTOP, LAPTOP, TABLET & MOBILE)
+   ========================================================================== */
+
+.joinus-page {
+  background-color: var(--black-bg, #0A0A0A);
+  color: var(--white, #FFFFFF);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 1: HERO SECTION
+   -------------------------------------------------------------------------- */
+.joinus-hero-section {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  padding-top: 110px; /* Navbar padding */
+  padding-bottom: 60px;
+  overflow: hidden;
+}
+
+/* Background Image Container */
+.joinus-hero-bg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.joinus-hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center right;
+  filter: brightness(0.9) contrast(1.05);
+}
+
+/* Overlay Gradients for Optimal Text Contrast */
+.joinus-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(10, 10, 10, 0.96) 0%,
+    rgba(10, 10, 10, 0.88) 40%,
+    rgba(10, 10, 10, 0.55) 70%,
+    rgba(10, 10, 10, 0.2) 100%
+  ),
+  linear-gradient(
+    180deg,
+    rgba(10, 10, 10, 0.85) 0%,
+    transparent 25%,
+    transparent 75%,
+    rgba(10, 10, 10, 0.95) 100%
+  );
+}
+
+/* Container & Content Layout */
+.joinus-hero-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 520px;
+}
+
+.joinus-hero-content {
+  max-width: 680px;
+  animation: fadeInDown 0.8s ease-out forwards;
+}
+
+/* JOIN US Title */
+.joinus-hero-title {
+  font-family: var(--font-primary, 'Bebas Neue', sans-serif);
+  font-size: clamp(3.8rem, 8.5vw, 8rem);
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: 3px;
+  color: var(--white, #FFFFFF);
+  margin-bottom: 24px;
+  /* text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9); */
+}
+
+.joinus-hero-title .title-highlight {
+  color: var(--gold-primary, #E8A838);
+  display: inline-block;
+  margin-left: 14px;
+}
+
+/* Subtitle */
+.joinus-hero-subtitle {
+  font-family: var(--font-tamil, 'Noto Sans Tamil', sans-serif);
+  font-size: clamp(1.5rem, 3.4vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--white, #FFFFFF);
+  margin-bottom: 20px;
+  /* text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95); */
+}
+
+.joinus-hero-subtitle .subtitle-highlight {
+  color: var(--gold-primary, #E8A838);
+}
+
+/* Description Paragraph */
+.joinus-hero-description {
+  font-family: var(--font-tamil, 'Noto Sans Tamil', sans-serif);
+  font-size: clamp(0.95rem, 1.7vw, 1.2rem);
+  font-weight: 500;
+  line-height: 1.65;
+  color: #D1D5DB;
+  margin-bottom: 38px;
+  max-width: 600px;
+}
+
+/* Buttons Container */
+.joinus-hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Generic Join Us Button */
+.joinus-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  gap: 16px;
+  min-width: 260px;
+}
+
+.btn-left-content {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.btn-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.btn-text-box {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.btn-tamil-text {
+  font-family: var(--font-tamil, 'Noto Sans Tamil', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.btn-english-text {
+  font-family: var(--font-primary, 'Bebas Neue', sans-serif);
+  font-size: 0.78rem;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin-top: 2px;
+  opacity: 0.9;
+}
+
+.btn-arrow {
+  transition: transform 0.3s ease;
+}
+
+/* Primary Button (BECOME A MEMBER) */
+.joinus-btn-primary {
+  background-color: var(--gold-primary, #E8A838);
+  color: #000000;
+  border-color: var(--gold-primary, #E8A838);
+  box-shadow: 0 4px 20px rgba(232, 168, 56, 0.4);
+}
+
+.joinus-btn-primary .btn-icon-box {
+  background-color: rgba(0, 0, 0, 0.15);
+  color: #000000;
+}
+
+.joinus-btn-primary .btn-arrow {
+  color: #000000;
+}
+
+.joinus-btn-primary:hover {
+  background-color: #f0b446;
+  border-color: #f0b446;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(232, 168, 56, 0.6);
+}
+
+.joinus-btn-primary:hover .btn-arrow {
+  transform: translateX(6px);
+}
+
+/* Secondary Button (JOIN AS VOLUNTEER) */
+.joinus-btn-secondary {
+  background-color: rgba(10, 10, 10, 0.8);
+  color: #FFFFFF;
+  border-color: var(--gold-primary, #E8A838);
+  backdrop-filter: blur(10px);
+}
+
+.joinus-btn-secondary .btn-icon-box {
+  background-color: rgba(232, 168, 56, 0.15);
+  color: var(--gold-primary, #E8A838);
+}
+
+.joinus-btn-secondary .btn-arrow {
+  color: var(--gold-primary, #E8A838);
+}
+
+.joinus-btn-secondary:hover {
+  background-color: rgba(232, 168, 56, 0.12);
+  border-color: var(--gold-light, #F5C563);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(232, 168, 56, 0.3);
+}
+
+.joinus-btn-secondary:hover .btn-arrow {
+  transform: translateX(6px);
+}
+
+/* --------------------------------------------------------------------------
+   YELLOW BRUSH BADGE (BOTTOM RIGHT ON DESKTOP)
+   -------------------------------------------------------------------------- */
+.joinus-hero-brush-badge {
+  align-self: flex-end;
+  margin-top: 30px;
+  position: relative;
+  transform: rotate(-3deg);
+  animation: fadeInUp 1s ease-out forwards 0.3s;
+  z-index: 3;
+}
+
+.brush-badge-inner {
+  background: linear-gradient(135deg, #E8A838 0%, #D49220 100%);
+  color: #000000;
+  padding: 16px 36px 16px 28px;
+  clip-path: polygon(
+    0% 12%, 
+    95% 0%, 
+    100% 88%, 
+    6% 100%
+  );
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.brush-badge-inner::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+  clip-path: polygon(
+    2% 8%, 
+    98% 2%, 
+    98% 94%, 
+    2% 98%
+  );
+}
+
+.brush-badge-text {
+  font-family: var(--font-tamil, 'Noto Sans Tamil', sans-serif);
+  font-size: clamp(1.1rem, 2vw, 1.55rem);
+  font-weight: 900;
+  line-height: 1.25;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #000000;
+  /* text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4); */
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 2: WHY JOIN US ("ஏன் எங்களுடன் இணைய வேண்டும்?")
+   -------------------------------------------------------------------------- */
+.joinus-why-section {
+  padding: 50px 0 70px;
+  background-color: var(--black-bg, #0A0A0A);
+  position: relative;
+  z-index: 2;
+}
+
+/* Section Header with Ornamental Lines */
+.joinus-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.ornamental-line {
+  height: 1px;
+  width: 120px;
+  background: linear-gradient(90deg, transparent, var(--gold-primary, #E8A838));
+}
+
+.joinus-section-header .ornamental-line:last-child {
+  background: linear-gradient(90deg, var(--gold-primary, #E8A838), transparent);
+}
+
+.ornamental-diamond {
+  color: var(--gold-primary, #E8A838);
+  font-size: 0.75rem;
+}
+
+.joinus-section-title {
+  font-family: var(--font-tamil, 'Noto Sans Tamil', sans-serif);
+  font-size: clamp(1.3rem, 2.4vw, 2.1rem);
+  font-weight: 800;
+  color: var(--white, #FFFFFF);
+  letter-spacing: 0.5px;
+  margin: 0;
+  /* text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8); */
+}
+
+/* Main Dark Card Container */
+.why-join-card-container {
+  background-color: #0E0E0E;
+  border: 1px solid rgba(232, 168, 56, 0.3);
+  border-radius: 18px;
+  padding: 44px 28px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+
+/* Grid Layout for 6 Columns */
+.why-join-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0;
+  width: 100%;
+}
+
+.why-join-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 16px;
+  position: relative;
+}
+
+/* Vertical divider line between grid items */
+.why-item-divider {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background: linear-gradient(
+    180deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.15), 
+    transparent
+  );
+}
+
+/* Circular Icon Badge */
+.why-icon-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid var(--gold-primary, #E8A838);
+  background-color: rgba(232, 168, 56, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 18px rgba(232, 168, 56, 0.18);
+  flex-shrink: 0;
+}
+
+.why-icon {
+  color: var(--gold-primary, #E8A838);
+  transition: color 0.35s ease;
+}
+
+.why-join-item:hover .why-icon-circle {
+  transform: translateY(-6px) scale(1.08);
+  background-color: var(--gold-primary, #E8A838);
+  box-shadow: 0 0 30px rgba(232, 168, 56, 0.55);
+}
+
+.why-join-item:hover .why-icon {
+  color: #000000;
+}
+
+/* Text Container & Typography */
+.why-text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.why-item-title {
+  font-family: var(--font-tamil, 'Noto Sans Tamil', sans-serif);
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--white, #FFFFFF);
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+
+.why-item-desc {
+  font-family: var(--font-tamil, 'Noto Sans Tamil', sans-serif);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #B0B0B0;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 3: WHO CAN JOIN & HOW TO JOIN
+   -------------------------------------------------------------------------- */
+.joinus-third-section {
+  padding: 20px 0 70px;
+  background-color: var(--black-bg, #0A0A0A);
+  position: relative;
+  z-index: 2;
+}
+
+.joinus-third-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.joinus-card-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.who-card-inner,
+.how-card-inner {
+  background-color: #0E0E0E;
+  border: 1px solid rgba(232, 168, 56, 0.3);
+  border-radius: 18px;
+  padding: 28px 24px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+/* Left Block: 7 Portrait Cards */
+.who-portraits-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-top: 10px;
+  margin-bottom: 24px;
+}
+
+.portrait-card-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1.5px solid rgba(232, 168, 56, 0.75);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.portrait-card-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold-primary, #E8A838);
+  box-shadow: 0 8px 20px rgba(232, 168, 56, 0.3);
+}
+
+.portrait-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2.8 / 6.8;
+  min-height: 190px;
+  overflow: hidden;
+}
+
+.portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.4s ease;
+}
+
+.portrait-card-item:hover .portrait-img {
+  transform: scale(1.08);
+}
+
+.portrait-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 10, 10, 0.95) 0%,
+    rgba(10, 10, 10, 0.4) 45%,
+    transparent 100%
+  );
+}
+
+.portrait-label {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-family: var(--font-tamil, 'Noto Sans Tamil', sans-serif);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  /* text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95); */
+  z-index: 2;
+  padding: 0 2px;
+  line-height: 1.15;
+}
+
+/* Left Block: Yellow Brush Banner */
+.who-brush-banner {
+  margin-top: auto;
+  position: relative;
+  transform: rotate(-0.5deg);
+}
+
+.who-brush-banner-inner {
+  background: linear-gradient(135deg, #E8A838 0%, #D49220 100%);
+  color: #000000;
+  padding: 12px 20px;
+  text-align: center;
+  clip-path: polygon(0% 12%, 98% 0%, 100% 88%, 2% 100%);
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.who-brush-text {
+  font-family: var(--font-tamil, 'Noto Sans Tamil', sans-serif);
+  font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+  font-weight: 900;
+  color: #000000;
+  letter-spacing: 0.5px;
+  /* text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3); */
+}
+
+/* Right Block: 4 Step Process Flow Alignment */
+.how-steps-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4px;
+  margin-top: 14px;
+  margin-bottom: 24px;
+}
+
+.how-step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.how-icon-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid var(--gold-primary, #E8A838);
+  background-color: rgba(232, 168, 56, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  transition: all 0.35s ease;
+  box-shadow: 0 0 16px rgba(232, 168, 56, 0.18);
+  flex-shrink: 0;
+}
+
+.how-icon {
+  color: var(--gold-primary, #E8A838);
+  transition: color 0.35s ease;
+}
+
+.how-step-item:hover .how-icon-circle {
+  transform: translateY(-5px) scale(1.05);
+  background-color: var(--gold-primary, #E8A838);
+  box-shadow: 0 0 25px rgba(232, 168, 56, 0.5);
+}
+
+.how-step-item:hover .how-icon {
+  color: #000000;
+}
+
+.how-step-number {
+  font-family: var(--font-primary, 'Bebas Neue', sans-serif);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--gold-primary, #E8A838);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+  line-height: 1;
+  text-align: center;
+}
+
+.how-step-text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  min-height: 58px;
+  justify-content: flex-start;
+}
+
+.how-step-title {
+  font-family: var(--font-tamil, 'Noto Sans Tamil', sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.35;
+  margin: 0;
+  text-align: center;
+}
+
+.how-step-subtitle {
+  font-family: var(--font-tamil, 'Noto Sans Tamil', sans-serif);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #B0B0B0;
+  line-height: 1.3;
+  margin-top: 4px;
+  text-align: center;
+}
+
+.how-step-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 23px; /* Aligns arrow center to 64px icon circle center */
+  color: var(--gold-primary, #E8A838);
+  opacity: 0.85;
+  flex-shrink: 0;
+}
+
+/* Right Block: Slogan Box */
+.how-slogan-container {
+  text-align: center;
+  padding-top: 14px;
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.how-slogan-sub {
+  font-family: var(--font-tamil, 'Noto Sans Tamil', sans-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 2px;
+}
+
+.how-slogan-main {
+  font-family: var(--font-tamil, 'Noto Sans Tamil', sans-serif);
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 900;
+  color: var(--gold-primary, #E8A838);
+  margin: 0;
+  /* text-shadow: 0 0 20px rgba(232, 168, 56, 0.45); */
+  letter-spacing: 0.5px;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 4: BENEFITS YOU RECEIVE ("நீங்கள் பெறும் பலன்கள்")
+   -------------------------------------------------------------------------- */
+.joinus-benefits-section {
+  padding: 20px 0 70px;
+  background-color: var(--black-bg, #0A0A0A);
+  position: relative;
+  z-index: 2;
+}
+
+.benefits-card-container {
+  background-color: #0E0E0E;
+  border: 1px solid rgba(232, 168, 56, 0.3);
+  border-radius: 18px;
+  padding: 28px 24px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.benefit-card-item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1.5px solid rgba(232, 168, 56, 0.45);
+  background-color: #080808;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.benefit-card-item:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold-primary, #E8A838);
+  box-shadow: 0 12px 30px rgba(232, 168, 56, 0.35);
+}
+
+.benefit-img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.benefit-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.benefit-card-item:hover .benefit-img {
+  transform: scale(1.08);
+}
+
+.benefit-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(8, 8, 8, 0.85) 0%,
+    rgba(8, 8, 8, 0.2) 60%,
+    transparent 100%
+  );
+}
+
+.benefit-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 12px;
+  background-color: #080808;
+  border-top: 1px solid rgba(232, 168, 56, 0.2);
+  min-height: 64px;
+}
+
+.benefit-icon-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold-primary, #E8A838);
+  background-color: rgba(232, 168, 56, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(232, 168, 56, 0.15);
+}
+
+.benefit-card-item:hover .benefit-icon-circle {
+  transform: scale(1.1);
+  background-color: var(--gold-primary, #E8A838);
+  box-shadow: 0 0 20px rgba(232, 168, 56, 0.5);
+}
+
+.benefit-icon {
+  color: var(--gold-primary, #E8A838);
+  transition: color 0.3s ease;
+}
+
+.benefit-card-item:hover .benefit-icon {
+  color: #000000;
+}
+
+.benefit-text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+}
+
+.benefit-text-line1 {
+  font-family: var(--font-tamil, 'Noto Sans Tamil', sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.benefit-text-line1.gold-text {
+  color: var(--gold-primary, #E8A838);
+}
+
+.benefit-text-line1.white-text {
+  color: #FFFFFF;
+}
+
+.benefit-text-line2 {
+  font-family: var(--font-tamil, 'Noto Sans Tamil', sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.25;
+}
+
+/* --------------------------------------------------------------------------
+   SECTION 5: CTA BANNER & FOOTER BAR
+   -------------------------------------------------------------------------- */
+.joinus-cta-section {
+  padding-top: 30px;
+  background-color: var(--black-bg, #0A0A0A);
+  position: relative;
+  z-index: 2;
+}
+
+/* Top 3-Column Grid */
+.cta-top-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.7fr 1.15fr;
+  gap: 24px;
+  align-items: stretch;
+  margin-bottom: 50px;
+}
+
+.cta-left-card,
+.cta-right-card {
+  background-color: #0E0E0E;
+  border: 1px solid rgba(232, 168, 56, 0.35);
+  border-radius: 18px;
+  padding: 28px 24px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: visible;
+}
+
+.cta-card-header-title {
+  font-family: var(--font-tamil, 'Noto Sans Tamil', sans-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 22px;
+  display: block;
+  line-height: 1.4;
+}
+
+/* Left Card: Stats & Avatars Cluster */
+.cta-left-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.cta-stats-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cta-stat-number {
+  font-family: var(--font-primary, 'Bebas Neue', sans-serif);
+  font-size: clamp(2.8rem, 3.8vw, 3.6rem);
+  color: var(--gold-primary, #E8A838);
+  font-weight: 900;
+  line-height: 0.9;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.cta-stat-label {
+  font-family: var(--font-tamil, 'Noto Sans Tamil', sans-serif);
+  font-size: 0.82rem;
+  color: #FFFFFF;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.cta-btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--gold-primary, #E8A838);
+  color: #000000;
+  font-family: var(--font-primary, 'Bebas Neue', sans-serif);
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(232, 168, 56, 0.4);
+}
+
+.cta-btn-gold:hover {
+  background-color: #f0b446;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(232, 168, 56, 0.6);
+}
+
+/* Overlapping Avatars Cluster */
+.cta-avatars-cluster {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  flex-shrink: 0;
+}
+
+.avatar-circle {
+  position: absolute;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--gold-primary, #E8A838);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  background-color: #000;
+}
+
+.avatar-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-main {
+  width: 52px;
+  height: 52px;
+  top: 44px;
+  left: 44px;
+  z-index: 5;
+  border-width: 2.5px;
+}
+
+.avatar-pos-1 {
+  width: 38px;
+  height: 38px;
+  top: 6px;
+  left: 10px;
+  z-index: 2;
+}
+
+.avatar-pos-2 {
+  width: 42px;
+  height: 42px;
+  top: 0px;
+  left: 50px;
+  z-index: 3;
+}
+
+.avatar-pos-3 {
+  width: 36px;
+  height: 36px;
+  top: 12px;
+  left: 94px;
+  z-index: 2;
+}
+
+.avatar-pos-4 {
+  width: 34px;
+  height: 34px;
+  top: 56px;
+  left: 0px;
+  z-index: 2;
+}
+
+.avatar-pos-5 {
+  width: 36px;
+  height: 36px;
+  top: 96px;
+  left: 18px;
+  z-index: 3;
+}
+
+.avatar-pos-6 {
+  width: 38px;
+  height: 38px;
+  top: 94px;
+  left: 82px;
+  z-index: 2;
+}
+
+/* Center Calligraphy Title */
+.cta-center-calligraphy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.calligraphy-text-wrapper {
+  position: relative;
+  text-align: center;
+}
+
+.calligraphy-line {
+  font-family: var(--font-tamil, 'Noto Sans Tamil', sans-serif);
+  font-size: clamp(2.2rem, 3.4vw, 3.2rem);
+  font-weight: 900;
+  color: #FFFFFF;
+  line-height: 1.05;
+  margin: 0;
+  /* text-shadow: 0 4px 15px rgba(0, 0, 0, 0.95); */
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+.calligraphy-line.calligraphy-gold {
+  color: var(--gold-primary, #E8A838);
+  font-size: clamp(2.6rem, 4vw, 3.8rem);
+  /* text-shadow: 0 0 25px rgba(232, 168, 56, 0.5); */
+}
+
+.calligraphy-underline {
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, var(--gold-primary, #E8A838), transparent);
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+/* Right Card: 4 Features */
+.cta-features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cta-feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.feature-icon-circle {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 2px solid var(--gold-primary, #E8A838);
+  background-color: rgba(232, 168, 56, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  box-shadow: 0 0 15px rgba(232, 168, 56, 0.18);
+  transition: all 0.35s ease;
+  flex-shrink: 0;
+}
+
+.feature-icon {
+  color: var(--gold-primary, #E8A838);
+  transition: color 0.35s ease;
+}
+
+.feature-label {
+  font-family: var(--font-tamil, 'Noto Sans Tamil', sans-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.25;
+}
+
+.cta-feature-item:hover .feature-icon-circle {
+  transform: translateY(-4px) scale(1.06);
+  background-color: var(--gold-primary, #E8A838);
+  box-shadow: 0 0 25px rgba(232, 168, 56, 0.5);
+}
+
+.cta-feature-item:hover .feature-icon {
+  color: #000000;
+}
+
+/* Middle Crowd Background Banner */
+.cta-crowd-banner {
+  position: relative;
+  width: 100%;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-top: 1px solid rgba(232, 168, 56, 0.25);
+  border-bottom: 1px solid rgba(232, 168, 56, 0.25);
+}
+
+.crowd-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6) contrast(1.1);
+}
+
+.crowd-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(10, 10, 10, 0.95) 0%,
+    rgba(10, 10, 10, 0.75) 40%,
+    rgba(10, 10, 10, 0.75) 60%,
+    rgba(10, 10, 10, 0.95) 100%
+  );
+}
+
+.crowd-banner-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 32px;
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+.crowd-text-box {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.crowd-sub-title {
+  font-family: var(--font-tamil, 'Noto Sans Tamil', sans-serif);
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+  font-weight: 700;
+  color: #FFFFFF;
+  display: block;
+  margin-bottom: 4px;
+  /* text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9); */
+}
+
+.crowd-main-title {
+  font-family: var(--font-tamil, 'Noto Sans Tamil', sans-serif);
+  font-size: clamp(1.8rem, 3.4vw, 2.7rem);
+  font-weight: 900;
+  color: var(--gold-primary, #E8A838);
+  margin: 0;
+  /* text-shadow: 0 0 25px rgba(232, 168, 56, 0.5); */
+  letter-spacing: 0.5px;
+}
+
+/* Action Buttons */
+.crowd-buttons-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.crowd-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  min-width: 250px;
+}
+
+.crowd-btn-primary {
+  background-color: var(--gold-primary, #E8A838);
+  border: 1.5px solid var(--gold-primary, #E8A838);
+  color: #000000;
+  box-shadow: 0 4px 20px rgba(232, 168, 56, 0.4);
+}
+
+.crowd-btn-primary .crowd-btn-icon-bg {
+  background-color: rgba(0, 0, 0, 0.15);
+  color: #000000;
+}
+
+.crowd-btn-primary:hover {
+  background-color: #f0b446;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(232, 168, 56, 0.6);
+}
+
+.crowd-btn-primary:hover .crowd-btn-arrow {
+  transform: translateX(5px);
+}
+
+.crowd-btn-secondary {
+  background-color: rgba(10, 10, 10, 0.85);
+  border: 1.5px solid var(--gold-primary, #E8A838);
+  color: #FFFFFF;
+  backdrop-filter: blur(8px);
+}
+
+.crowd-btn-secondary .crowd-btn-icon-bg {
+  background-color: rgba(232, 168, 56, 0.15);
+  color: var(--gold-primary, #E8A838);
+}
+
+.crowd-btn-secondary .crowd-btn-arrow {
+  color: var(--gold-primary, #E8A838);
+}
+
+.crowd-btn-secondary:hover {
+  background-color: rgba(232, 168, 56, 0.12);
+  border-color: var(--gold-light, #F5C563);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(232, 168, 56, 0.3);
+}
+
+.crowd-btn-secondary:hover .crowd-btn-arrow {
+  transform: translateX(5px);
+}
+
+.crowd-btn-icon-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.crowd-btn-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.btn-action-label {
+  font-family: var(--font-primary, 'Bebas Neue', sans-serif);
+  font-size: 0.98rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  display: block;
+}
+
+.btn-action-sub {
+  font-family: var(--font-tamil, 'Noto Sans Tamil', sans-serif);
+  font-size: 0.78rem;
+  font-weight: 700;
+  display: block;
+  opacity: 0.9;
+}
+
+.crowd-btn-arrow {
+  transition: transform 0.3s ease;
+}
+
+/* --------------------------------------------------------------------------
+   BOTTOM SITE FOOTER BAR
+   -------------------------------------------------------------------------- */
+.joinus-footer-bar {
+  background-color: #050505;
+  padding: 22px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-left-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.footer-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: var(--font-primary, 'Bebas Neue', sans-serif);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: 1.5px;
+  line-height: 1;
+}
+
+.brand-tagline {
+  font-family: var(--font-tamil, 'Noto Sans Tamil', sans-serif);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--gold-primary, #E8A838);
+  margin-top: 2px;
+}
+
+.footer-center-social {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.follow-us-label {
+  font-family: var(--font-primary, 'Bebas Neue', sans-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 1.5px;
+}
+
+.social-icons-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-circle-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.social-circle-btn:hover {
+  transform: translateY(-3px) scale(1.1);
+  opacity: 0.9;
+}
+
+.facebook-btn {
+  background-color: #1877F2;
+}
+
+.twitter-btn {
+  background-color: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.instagram-btn {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.youtube-btn {
+  background-color: #FF0000;
+}
+
+.whatsapp-btn {
+  background-color: #25D366;
+}
+
+.telegram-btn {
+  background-color: #26A5E4;
+}
+
+.footer-right-motto {
+  display: flex;
+  align-items: center;
+}
+
+.motto-text {
+  font-family: var(--font-primary, 'Bebas Neue', sans-serif);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--gold-primary, #E8A838);
+  /* text-shadow: 0 0 12px rgba(232, 168, 56, 0.35); */
+}
+
+/* --------------------------------------------------------------------------
+   KEYFRAME ANIMATIONS
+   -------------------------------------------------------------------------- */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) rotate(-3deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(-3deg);
+  }
+}
+
+/* ==========================================================================
+   COMPREHENSIVE RESPONSIVE BREAKPOINTS (DESKTOP, LAPTOP, TABLET & MOBILE)
+   ========================================================================== */
+
+/* 1. Large Desktops & Laptops (1200px - 1399px) */
+@media (max-width: 1399px) {
+  .who-portraits-grid {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+  }
+  .portrait-label {
+    font-size: 0.72rem;
+  }
+}
+
+/* 2. Laptops & Small Desktops (992px - 1199px) */
+@media (max-width: 1199px) {
+  /* Section 2 Why Join Grid */
+  .why-join-grid {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 36px;
+  }
+
+  .why-item-divider {
+    display: none;
+  }
+
+  .why-join-item {
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0 12px;
+  }
+
+  .why-join-item:nth-child(3n) {
+    border-right: none;
+  }
+
+  /* Section 3 Grid */
+  .joinus-third-grid {
+    grid-template-columns: 1fr;
+    row-gap: 36px;
+  }
+
+  .who-portraits-grid {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+  }
+
+  /* Section 4 Benefits Grid */
+  .benefits-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  /* Section 5 CTA Grid */
+  .cta-top-grid {
+    grid-template-columns: 1fr;
+    row-gap: 28px;
+  }
+
+  .cta-center-calligraphy {
+    padding: 16px 0;
+  }
+}
+
+/* 3. Tablets (768px - 991px) */
+@media (max-width: 991px) {
+  /* Section 1 Hero */
+  .joinus-hero-section {
+    min-height: auto;
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  .joinus-hero-container {
+    min-height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .joinus-hero-content {
+    max-width: 100%;
+  }
+
+  .joinus-hero-brush-badge {
+    align-self: flex-start;
+    margin-top: 36px;
+  }
+
+  /* Section 3 Portraits & Steps */
+  .who-portraits-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .portrait-image-wrapper {
+    aspect-ratio: 3 / 5;
+    min-height: 160px;
+  }
+
+  .how-steps-row {
+    gap: 8px;
+  }
+
+  .how-icon-circle {
+    width: 54px;
+    height: 54px;
+  }
+
+  .how-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .how-step-arrow {
+    margin-top: 18px;
+  }
+
+  /* Section 5 Crowd Banner */
+  .crowd-banner-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .crowd-text-box {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .crowd-buttons-box {
+    margin-left: 0;
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Footer Bar */
+  .footer-bar-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+  }
+
+  .footer-left-brand {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-brand-text {
+    align-items: center;
+  }
+}
+
+/* 4. Mobile Large / Phablets (576px - 767px) */
+@media (max-width: 767px) {
+  .joinus-hero-title {
+    font-size: clamp(3.2rem, 10vw, 4.5rem);
+  }
+
+  .joinus-hero-subtitle {
+    font-size: clamp(1.35rem, 4.5vw, 1.8rem);
+  }
+
+  .joinus-hero-description {
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+  }
+
+  /* Section 2 Why Join */
+  .why-join-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 28px;
+  }
+
+  .why-join-item {
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .why-join-item:nth-child(2n) {
+    border-right: none;
+  }
+
+  .why-join-card-container {
+    padding: 30px 16px;
+  }
+
+  /* Section 3 Portraits & How to Join */
+  .who-portraits-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+
+  /* Responsive 2x2 grid for process steps on mobile */
+  .how-steps-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 12px;
+  }
+
+  .how-step-arrow {
+    display: none;
+  }
+
+  /* Section 4 Benefits Grid */
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .benefit-card-footer {
+    padding: 10px 8px;
+    gap: 8px;
+  }
+
+  .benefit-icon-circle {
+    width: 32px;
+    height: 32px;
+  }
+
+  .benefit-text-line1,
+  .benefit-text-line2 {
+    font-size: 0.78rem;
+  }
+
+  /* Section 5 CTA Features */
+  .cta-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 12px;
+  }
+
+  .crowd-buttons-box {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .crowd-btn {
+    width: 100%;
+    max-width: 340px;
+  }
+}
+
+/* 5. Mobile Small / Phones (320px - 575px) */
+@media (max-width: 575px) {
+  .joinus-hero-section {
+    padding-top: 90px;
+    padding-bottom: 40px;
+  }
+
+  .joinus-hero-title {
+    font-size: clamp(2.8rem, 12vw, 3.8rem);
+    margin-bottom: 16px;
+  }
+
+  .joinus-hero-subtitle {
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
+    margin-bottom: 16px;
+  }
+
+  .joinus-hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .joinus-btn {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .brush-badge-inner {
+    padding: 12px 20px;
+  }
+
+  .brush-badge-text {
+    font-size: 1rem;
+  }
+
+  /* Section 2 Why Join Grid */
+  .why-join-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 24px;
+  }
+
+  .why-icon-circle {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 14px;
+  }
+
+  .why-item-title {
+    font-size: 0.92rem;
+  }
+
+  .why-item-desc {
+    font-size: 0.8rem;
+  }
+
+  .ornamental-line {
+    width: 30px;
+  }
+
+  .joinus-section-title {
+    font-size: 1.25rem;
+  }
+
+  /* Section 3 Portraits */
+  .who-portraits-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .portrait-label {
+    font-size: 0.7rem;
+  }
+
+  /* Section 4 Benefits */
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .benefits-card-container {
+    padding: 20px 12px;
+  }
+
+  /* Section 5 CTA Left Card Content */
+  .cta-left-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cta-stats-box {
+    align-items: center;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .cta-avatars-cluster {
+    margin-top: 10px;
+  }
+
+  .crowd-sub-title {
+    font-size: 1.15rem;
+  }
+
+  .crowd-main-title {
+    font-size: 1.55rem;
+  }
+}

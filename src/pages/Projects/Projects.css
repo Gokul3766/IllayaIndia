@@ -106,7 +106,7 @@
   color: var(--gold-primary, #E8A838);
   margin-bottom: 16px;
   letter-spacing: -0.3px;
-  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.7);
+  /* text-shadow: 0 4px 24px rgba(0, 0, 0, 0.7); */
 }
 
 .projects-hero-title .title-highlight {
@@ -302,7 +302,7 @@
   white-space: nowrap;
   margin: 0;
   letter-spacing: -0.3px;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  /* text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6); */
 }
 
 /* 10 Projects Grid Layout */
@@ -503,7 +503,7 @@
   text-align: center;
   margin: 0 0 18px 0;
   letter-spacing: -0.2px;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+  /* text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7); */
 }
 
 .impact-banner-divider {

@@ -35,7 +35,7 @@ const Navbar = () => {
     { label: "People's Parliament", href: "/peoples-parliament" },
     { label: "Projects", href: "/projects" },
     { label: "Media", href: "/media" },
-    { label: "Join Us", href: "/#join" },
+    { label: "Join Us", href: "/join-us" },
   ];
 
   const handleNavClick = () => {
@@ -89,9 +89,11 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
-              <button className="navbar-donate-btn" id="donate-btn">
-                Donate
-              </button>
+              <Link to="/donate" className="navbar-donate-btn-link">
+                <button className="navbar-donate-btn" id="donate-btn">
+                  Donate
+                </button>
+              </Link>
             </div>
 
             {/* Mobile Hamburger Toggle */}
@@ -162,13 +164,14 @@ const Navbar = () => {
         </ul>
 
         <div className="mobile-drawer-footer">
-          <button
-            className="mobile-donate-btn"
-            id="mobile-donate-btn"
-            onClick={handleNavClick}
-          >
-            Donate Now
-          </button>
+          <Link to="/donate" onClick={handleNavClick} style={{ textDecoration: 'none', width: '100%' }}>
+            <button
+              className="mobile-donate-btn"
+              id="mobile-donate-btn"
+            >
+              Donate Now
+            </button>
+          </Link>
           <div className="mobile-social-links">
             <a href="#" aria-label="Facebook">
               <i className="bi bi-facebook"></i>
